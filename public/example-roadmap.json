@@ -1,0 +1,195 @@
+{
+  "title": "Example Learning Roadmap",
+  "goal": "Master a new skill in 4 weeks",
+  "startDate": "2025-01-01",
+  "targetEndDate": "2025-01-28",
+  "totalDurationWeeks": 4,
+  "timeCommitmentPerWeek": "10-15 hours",
+  "learningStyle": "Hands-on & Project-based",
+  "profile": {
+    "description": "Beginner learner looking to build practical skills",
+    "experience": "0-1 years"
+  },
+  "coreSkills": [
+    {
+      "skill": "Core Skill 1",
+      "description": "Foundation skill needed for this learning path",
+      "relevantWeeks": "Weeks 1-2"
+    },
+    {
+      "skill": "Core Skill 2",
+      "description": "Advanced skill built on foundation",
+      "relevantWeeks": "Weeks 3-4"
+    }
+  ],
+  "phases": [
+    {
+      "phaseNumber": 1,
+      "title": "Foundation Phase",
+      "summary": "Build fundamental understanding and basic skills",
+      "weekRange": "Weeks 1-2",
+      "weeks": [
+        {
+          "weekNumber": 1,
+          "title": "Week 1: Getting Started",
+          "theme": "Introduction and Setup",
+          "totalHours": 12,
+          "status": "not_started",
+          "timeBreakdown": {
+            "build": 4,
+            "research": 6,
+            "share": 2
+          },
+          "buildSection": {
+            "hours": 4,
+            "projectTitle": "First Project",
+            "description": "Build your first project to understand the basics",
+            "technicalStack": ["Tool 1", "Tool 2"],
+            "deliverables": [
+              {
+                "description": "Complete setup and configuration",
+                "isCompleted": false
+              },
+              {
+                "description": "Build basic project structure",
+                "isCompleted": false
+              }
+            ]
+          },
+          "researchSection": {
+            "hours": 6,
+            "deepDiveTopics": [
+              {
+                "description": "Core Concept 1",
+                "isCompleted": false,
+                "suggestedResources": [
+                  {
+                    "title": "Introduction Guide",
+                    "type": "Article",
+                    "url": "https://example.com/guide"
+                  }
+                ]
+              }
+            ],
+            "resources": [
+              {
+                "title": "Getting Started Documentation",
+                "type": "Documentation",
+                "url": "https://example.com/docs"
+              }
+            ]
+          },
+          "shareSection": {
+            "hours": 2,
+            "artifactTitle": "Week 1 Summary",
+            "artifactDescription": "Document your learning and first project",
+            "deliverables": [
+              {
+                "description": "Write a summary of key learnings",
+                "isCompleted": false
+              }
+            ]
+          }
+        },
+        {
+          "weekNumber": 2,
+          "title": "Week 2: Building Skills",
+          "theme": "Practice and Application",
+          "totalHours": 15,
+          "status": "not_started",
+          "timeBreakdown": {
+            "build": 8,
+            "research": 5,
+            "share": 2
+          },
+          "buildSection": {
+            "hours": 8,
+            "projectTitle": "Practice Project",
+            "description": "Apply what you learned in a more complex project",
+            "technicalStack": ["Tool 1", "Tool 2", "Tool 3"],
+            "deliverables": [
+              {
+                "description": "Implement core features",
+                "isCompleted": false
+              }
+            ]
+          },
+          "researchSection": {
+            "hours": 5,
+            "deepDiveTopics": [
+              {
+                "description": "Advanced Concept",
+                "isCompleted": false
+              }
+            ]
+          },
+          "shareSection": {
+            "hours": 2,
+            "artifactTitle": "Week 2 Project Demo",
+            "artifactDescription": "Share your project progress"
+          }
+        }
+      ]
+    },
+    {
+      "phaseNumber": 2,
+      "title": "Advanced Phase",
+      "summary": "Master advanced concepts and build portfolio projects",
+      "weekRange": "Weeks 3-4",
+      "weeks": [
+        {
+          "weekNumber": 3,
+          "title": "Week 3: Advanced Topics",
+          "theme": "Deep Dive",
+          "totalHours": 15,
+          "status": "not_started",
+          "timeBreakdown": {
+            "build": 8,
+            "research": 5,
+            "share": 2
+          },
+          "buildSection": {
+            "hours": 8,
+            "projectTitle": "Advanced Project",
+            "description": "Build a complex project showcasing advanced skills"
+          },
+          "researchSection": {
+            "hours": 5,
+            "resources": []
+          },
+          "shareSection": {
+            "hours": 2,
+            "artifactTitle": "Technical Blog Post",
+            "artifactDescription": "Write about advanced concepts learned"
+          }
+        },
+        {
+          "weekNumber": 4,
+          "title": "Week 4: Capstone",
+          "theme": "Final Project",
+          "totalHours": 18,
+          "status": "not_started",
+          "timeBreakdown": {
+            "build": 12,
+            "research": 4,
+            "share": 2
+          },
+          "buildSection": {
+            "hours": 12,
+            "projectTitle": "Capstone Project",
+            "description": "Build a comprehensive portfolio project"
+          },
+          "researchSection": {
+            "hours": 4,
+            "resources": []
+          },
+          "shareSection": {
+            "hours": 2,
+            "artifactTitle": "Portfolio Presentation",
+            "artifactDescription": "Present your complete learning journey"
+          }
+        }
+      ]
+    }
+  ]
+}

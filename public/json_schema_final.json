@@ -1,0 +1,583 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AI PM Roadmap Schema",
+  "description": "JSON Schema for the 14-Week Comprehensive AI PM Roadmap",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "goal": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "string"
+    },
+    "targetEndDate": {
+      "type": "string"
+    },
+    "totalDurationWeeks": {
+      "type": "integer"
+    },
+    "timeCommitmentPerWeek": {
+      "type": "string"
+    },
+    "profile": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "experience": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "description",
+        "experience"
+      ]
+    },
+    "learningStyle": {
+      "type": "string"
+    },
+    "coreSkills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "skill": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "relevantWeeks": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "skill",
+          "description",
+          "relevantWeeks"
+        ]
+      }
+    },
+    "phases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "phaseNumber": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "weekRange": {
+            "type": "string"
+          },
+          "weeks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "weekNumber": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "theme": {
+                  "type": "string"
+                },
+                "totalHours": {
+                  "type": "integer"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "timeBreakdown": {
+                  "type": "object",
+                  "properties": {
+                    "build": {
+                      "type": "integer"
+                    },
+                    "research": {
+                      "type": "integer"
+                    },
+                    "share": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "build",
+                    "research",
+                    "share"
+                  ]
+                },
+                "buildSection": {
+                  "type": "object",
+                  "properties": {
+                    "hours": {
+                      "type": "integer"
+                    },
+                    "projectTitle": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "technicalStack": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "deliverables": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "description": {
+                            "type": "string"
+                          },
+                          "isCompleted": {
+                            "type": "boolean"
+                          }
+                        },
+                        "required": [
+                          "description",
+                          "isCompleted"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "hours",
+                    "projectTitle",
+                    "description"
+                  ]
+                },
+                "researchSection": {
+                  "type": "object",
+                  "properties": {
+                    "hours": {
+                      "type": "integer"
+                    },
+                    "deepDiveTopics": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "description": {
+                            "type": "string"
+                          },
+                          "isCompleted": {
+                            "type": "boolean"
+                          },
+                          "suggestedResources": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "title": {
+                                  "type": "string"
+                                },
+                                "type": {
+                                  "type": "string"
+                                },
+                                "url": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "title",
+                                "type",
+                                "url"
+                              ]
+                            }
+                          },
+                          "subtasks": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "description": {
+                                  "type": "string"
+                                },
+                                "isCompleted": {
+                                  "type": "boolean"
+                                },
+                                "suggestedResources": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "title": {
+                                        "type": "string"
+                                      },
+                                      "type": {
+                                        "type": "string"
+                                      },
+                                      "url": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "title",
+                                      "type",
+                                      "url"
+                                    ]
+                                  }
+                                }
+                              },
+                              "required": [
+                                "description",
+                                "isCompleted"
+                              ]
+                            }
+                          }
+                        },
+                        "required": [
+                          "description",
+                          "isCompleted"
+                        ]
+                      }
+                    },
+                    "resources": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "title": {
+                            "type": "string"
+                          },
+                          "type": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "title",
+                          "type"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "hours"
+                  ]
+                },
+                "shareSection": {
+                  "type": "object",
+                  "properties": {
+                    "hours": {
+                      "type": "integer"
+                    },
+                    "artifactTitle": {
+                      "type": "string"
+                    },
+                    "artifactDescription": {
+                      "type": "string"
+                    },
+                    "details": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "tags": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "required": [
+                    "hours",
+                    "artifactTitle",
+                    "artifactDescription"
+                  ]
+                }
+              },
+              "required": [
+                "weekNumber",
+                "title",
+                "theme",
+                "totalHours",
+                "status",
+                "timeBreakdown",
+                "buildSection",
+                "researchSection",
+                "shareSection"
+              ]
+            }
+          }
+        },
+        "required": [
+          "phaseNumber",
+          "title",
+          "summary",
+          "weekRange",
+          "weeks"
+        ]
+      }
+    },
+    "supplementalSections": {
+      "type": "object",
+      "properties": {
+        "weeklyTimeAllocationTemplate": {
+          "type": "object",
+          "properties": {
+            "monTue": {
+              "type": "string"
+            },
+            "wedThu": {
+              "type": "string"
+            },
+            "friSat": {
+              "type": "string"
+            },
+            "sun": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "monTue",
+            "wedThu",
+            "friSat",
+            "sun"
+          ]
+        },
+        "successMetrics": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "category": {
+                "type": "string"
+              },
+              "metrics": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "description": {
+                      "type": "string"
+                    },
+                    "isCompleted": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "description",
+                    "isCompleted"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "category",
+              "metrics"
+            ]
+          }
+        },
+        "masterResources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "category": {
+                "type": "string"
+              },
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "description"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "category",
+              "items"
+            ]
+          }
+        },
+        "interviewBank": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "category": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "string"
+              },
+              "framework": {
+                "type": "string"
+              },
+              "notes": {
+                "type": "string"
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "category",
+              "weight",
+              "questions"
+            ]
+          }
+        },
+        "demonstrationMoments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "category": {
+                "type": "string"
+              },
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "category",
+              "items"
+            ]
+          }
+        },
+        "weeklyRituals": {
+          "type": "object",
+          "properties": {
+            "daily": {
+              "type": "string"
+            },
+            "weekly": {
+              "type": "string"
+            },
+            "biWeekly": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "daily",
+            "weekly",
+            "biWeekly"
+          ]
+        },
+        "redFlagsAndAdjustments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "checkpoint": {
+                "type": "string"
+              },
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "adjustment": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "checkpoint",
+              "items",
+              "adjustment"
+            ]
+          }
+        },
+        "competitiveAdvantages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "advantage": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "leverage": {
+                "type": "object",
+                "properties": {
+                  "inInterviews": {
+                    "type": "string"
+                  },
+                  "inNetworking": {
+                    "type": "string"
+                  }
+                },
+                "required": []
+              }
+            },
+            "required": [
+              "advantage",
+              "description"
+            ]
+          }
+        },
+        "finalMotivation": {
+          "type": "string"
+        },
+        "nextSteps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "weeklyTimeAllocationTemplate",
+        "successMetrics",
+        "masterResources",
+        "interviewBank",
+        "demonstrationMoments",
+        "weeklyRituals",
+        "redFlagsAndAdjustments",
+        "competitiveAdvantages",
+        "finalMotivation",
+        "nextSteps"
+      ]
+    }
+  },
+  "required": [
+    "title",
+    "goal",
+    "startDate",
+    "targetEndDate",
+    "totalDurationWeeks",
+    "timeCommitmentPerWeek",
+    "profile",
+    "learningStyle",
+    "coreSkills",
+    "phases",
+    "supplementalSections"
+  ]
+}
