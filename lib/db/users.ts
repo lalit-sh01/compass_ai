@@ -129,7 +129,7 @@ export async function getCurrentUser(): Promise<User | null> {
 
     // Get email from Clerk user
     const email = clerkUser.emailAddresses?.[0]?.emailAddress || `${userId}@clerk.user`
-    const fullName = `${clerkUser.firstName || ''} ${clerkUser.lastName || ''}`.trim() || null
+    const fullName = `${clerkUser.firstName || ''} ${clerkUser.lastName || ''}`.trim() || undefined
 
     console.log(`[AUTO-CREATE USER] Creating user record for Clerk ID: ${userId}, Email: ${email}`)
 

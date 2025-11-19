@@ -5,7 +5,7 @@
  * Notes are stored in user_notes JSONB column keyed by entity ID.
  */
 
-import { createClientForServer } from '@/lib/supabase/server'
+import { createClient } from '@/lib/supabase/server'
 import { sanitizeNote } from '../validation/sanitizers'
 
 export interface Note {
@@ -23,7 +23,7 @@ export interface NotesMap {
  * Gets all notes for a roadmap
  */
 export async function getAllNotes(roadmapId: string): Promise<NotesMap> {
-  const supabase = await createClientForServer()
+  const supabase = await createClient()
 
   const { data, error } = await supabase
     .from('roadmaps')
@@ -74,7 +74,7 @@ export async function upsertNote(
   content: string,
   allowMarkdown: boolean = true
 ): Promise<Note> {
-  const supabase = await createClientForServer()
+  const supabase = await createClient()
 
   // Sanitize content
   const sanitizedContent = sanitizeNote(content, allowMarkdown)
@@ -127,7 +127,7 @@ export async function deleteNote(
   roadmapId: string,
   entityId: string
 ): Promise<void> {
-  const supabase = await createClientForServer()
+  const supabase = await createClient()
 
   // Get existing notes
   const existingNotes = await getAllNotes(roadmapId)
@@ -187,7 +187,7 @@ export async function deleteWeekNotes(
   roadmapId: string,
   weekNumber: number
 ): Promise<void> {
-  const supabase = await createClientForServer()
+  const supabase = await createClient()
 
   const allNotes = await getAllNotes(roadmapId)
   const weekPrefix = `w${weekNumber}`
@@ -294,7 +294,7 @@ export async function bulkUpsertNotes(
   notes: Array<{ entityId: string; content: string }>,
   allowMarkdown: boolean = true
 ): Promise<void> {
-  const supabase = await createClientForServer()
+  const supabase = await createClient()
 
   // Get existing notes
   const existingNotes = await getAllNotes(roadmapId)

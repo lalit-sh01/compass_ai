@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from '@clerk/nextjs';
 import { RoadmapProvider } from "@/context/RoadmapContext";
 import Header from "@/components/layout/Header";
+import { ThemeProvider } from "@/components/theme-provider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -16,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Roadmap Viewer - Schema-Driven Roadmap Visualization",
+  title: "Compass.ai - AI-Powered Learning Roadmaps",
   description: "A generic, schema-driven roadmap viewer for AI PM roadmaps and other structured learning paths",
 };
 
@@ -27,16 +25,23 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50 dark:bg-black`}
+          className={`${geistMono.variable} antialiased bg-bg-primary text-text-primary transition-colors duration-300`}
         >
-          <RoadmapProvider>
-            <Header />
-            <main className="min-h-screen">
-              {children}
-            </main>
-          </RoadmapProvider>
+          <ThemeProvider
+            attribute="data-theme"
+            defaultTheme="serene"
+            enableSystem={false}
+            disableTransitionOnChange
+          >
+            <RoadmapProvider>
+              <Header />
+              <main className="min-h-screen">
+                {children}
+              </main>
+            </RoadmapProvider>
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>

@@ -64,18 +64,18 @@ export default function AssessmentWizard({ onComplete }: AssessmentWizardProps) 
   const canProceed = currentQuestion.required ? isAnswered : true
 
   return (
-    <div className="bg-white rounded-lg shadow-sm p-8">
+    <div className="bg-surface rounded-lg shadow-sm p-8">
       {/* Progress Bar */}
       <div className="mb-8">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-sm font-medium text-gray-700">
+          <span className="text-sm font-medium text-text-secondary">
             Question {currentQuestionIndex + 1} of {ASSESSMENT_QUESTIONS.length}
           </span>
-          <span className="text-sm text-gray-500">{Math.round(progress)}% complete</span>
+          <span className="text-sm text-text-secondary">{Math.round(progress)}% complete</span>
         </div>
-        <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+        <div className="h-2 bg-border rounded-full overflow-hidden">
           <div
-            className="h-full bg-blue-600 transition-all duration-300"
+            className="h-full bg-primary transition-all duration-300"
             style={{ width: `${progress}%` }}
           />
         </div>
@@ -83,7 +83,7 @@ export default function AssessmentWizard({ onComplete }: AssessmentWizardProps) 
 
       {/* Question */}
       <div className="mb-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">{currentQuestion.question}</h2>
+        <h2 className="text-2xl font-bold text-text-primary mb-4">{currentQuestion.question}</h2>
 
         {currentQuestion.type === 'text' && (
           <input
@@ -91,7 +91,7 @@ export default function AssessmentWizard({ onComplete }: AssessmentWizardProps) 
             value={answers[currentQuestion.id] || ''}
             onChange={(e) => handleAnswer(e.target.value)}
             placeholder={currentQuestion.placeholder}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
             autoFocus
           />
         )}
@@ -102,7 +102,7 @@ export default function AssessmentWizard({ onComplete }: AssessmentWizardProps) 
             onChange={(e) => handleAnswer(e.target.value)}
             placeholder={currentQuestion.placeholder}
             rows={4}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+            className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
             autoFocus
           />
         )}
@@ -115,11 +115,11 @@ export default function AssessmentWizard({ onComplete }: AssessmentWizardProps) 
                 onClick={() => handleAnswer(option.value)}
                 className={`w-full px-4 py-3 text-left border-2 rounded-lg transition-all ${
                   answers[currentQuestion.id] === option.value
-                    ? 'border-blue-600 bg-blue-50'
-                    : 'border-gray-300 hover:border-gray-400'
+                    ? 'border-primary bg-primary/5'
+                    : 'border-border hover:border-primary/50'
                 }`}
               >
-                <span className="font-medium text-gray-900">{option.label}</span>
+                <span className="font-medium text-text-primary">{option.label}</span>
               </button>
             ))}
           </div>
@@ -138,7 +138,7 @@ export default function AssessmentWizard({ onComplete }: AssessmentWizardProps) 
         <button
           onClick={handleBack}
           disabled={currentQuestionIndex === 0}
-          className="px-6 py-2 text-gray-700 hover:text-gray-900 disabled:opacity-0 disabled:cursor-default font-medium"
+          className="px-6 py-2 text-text-secondary hover:text-text-primary disabled:opacity-0 disabled:cursor-default font-medium"
         >
           ← Back
         </button>
@@ -146,7 +146,7 @@ export default function AssessmentWizard({ onComplete }: AssessmentWizardProps) 
         <button
           onClick={handleNext}
           disabled={!canProceed || isLoading}
-          className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed font-medium transition-colors"
+          className="px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary-hover disabled:opacity-50 disabled:cursor-not-allowed font-medium transition-colors"
         >
           {isLoading ? (
             <span className="flex items-center gap-2">
