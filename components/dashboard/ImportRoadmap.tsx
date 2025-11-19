@@ -94,16 +94,16 @@ export default function ImportRoadmap() {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="group relative overflow-hidden rounded-lg border-2 border-dashed border-gray-300 p-6 transition-all hover:border-blue-600 hover:bg-blue-50 w-full"
+        className="group relative overflow-hidden rounded-lg border-2 border-dashed border-border p-6 transition-all hover:border-primary hover:bg-primary/5 w-full"
       >
         <div className="flex flex-col items-center text-center">
-          <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-purple-100 group-hover:bg-purple-200 transition-colors">
-            <Upload className="h-6 w-6 text-purple-600" />
+          <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
+            <Upload className="h-6 w-6 text-primary" />
           </div>
-          <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-900">
+          <h3 className="text-lg font-semibold text-text-primary group-hover:text-primary font-primary">
             Import Roadmap
           </h3>
-          <p className="mt-2 text-sm text-gray-600 group-hover:text-blue-800">
+          <p className="mt-2 text-sm text-text-secondary group-hover:text-primary/80 font-secondary">
             Upload a pre-generated roadmap JSON file
           </p>
         </div>
@@ -112,8 +112,8 @@ export default function ImportRoadmap() {
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-      <div className="relative w-full max-w-lg rounded-lg bg-white p-6 shadow-xl">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
+      <div className="relative w-full max-w-lg rounded-lg bg-surface p-6 shadow-xl border border-border">
         {/* Close button */}
         <button
           onClick={() => {
@@ -129,12 +129,12 @@ export default function ImportRoadmap() {
         {/* Header */}
         <div className="mb-6">
           <div className="flex items-center gap-3 mb-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-100">
-              <FileJson className="h-5 w-5 text-purple-600" />
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+              <FileJson className="h-5 w-5 text-primary" />
             </div>
-            <h2 className="text-xl font-bold text-gray-900">Import Roadmap</h2>
+            <h2 className="text-xl font-bold text-text-primary font-primary">Import Roadmap</h2>
           </div>
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-text-secondary font-secondary">
             Upload a JSON file that matches our roadmap schema
           </p>
         </div>
@@ -145,11 +145,10 @@ export default function ImportRoadmap() {
           onDragLeave={handleDrag}
           onDragOver={handleDrag}
           onDrop={handleDrop}
-          className={`relative rounded-lg border-2 border-dashed p-8 text-center transition-all ${
-            dragActive
-              ? 'border-blue-500 bg-blue-50'
-              : 'border-gray-300 hover:border-gray-400'
-          } ${uploading ? 'pointer-events-none opacity-50' : ''}`}
+          className={`relative rounded-lg border-2 border-dashed p-8 text-center transition-all ${dragActive
+            ? 'border-primary bg-primary/5'
+            : 'border-border hover:border-primary/50'
+            } ${uploading ? 'pointer-events-none opacity-50' : ''}`}
         >
           <input
             ref={fileInputRef}
@@ -160,24 +159,23 @@ export default function ImportRoadmap() {
           />
 
           <div className="flex flex-col items-center">
-            <div className={`mb-4 flex h-16 w-16 items-center justify-center rounded-full ${
-              dragActive ? 'bg-blue-100' : 'bg-gray-100'
-            }`}>
-              <Upload className={`h-8 w-8 ${dragActive ? 'text-blue-600' : 'text-gray-400'}`} />
+            <div className={`mb-4 flex h-16 w-16 items-center justify-center rounded-full ${dragActive ? 'bg-primary/10' : 'bg-bg-secondary'
+              }`}>
+              <Upload className={`h-8 w-8 ${dragActive ? 'text-primary' : 'text-text-secondary'}`} />
             </div>
 
-            <p className="mb-2 text-sm font-medium text-gray-900">
+            <p className="mb-2 text-sm font-medium text-text-primary font-primary">
               {uploading ? 'Uploading...' : 'Drop your JSON file here'}
             </p>
-            <p className="mb-4 text-xs text-gray-500">or</p>
+            <p className="mb-4 text-xs text-text-secondary font-secondary">or</p>
             <button
               onClick={() => fileInputRef.current?.click()}
               disabled={uploading}
-              className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 disabled:opacity-50"
+              className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-on-primary hover:bg-primary-hover disabled:opacity-50 shadow-sm glow-accent transition-all"
             >
               Browse Files
             </button>
-            <p className="mt-4 text-xs text-gray-500">
+            <p className="mt-4 text-xs text-text-secondary font-secondary">
               Max file size: 5MB • Format: JSON
             </p>
           </div>
@@ -208,25 +206,25 @@ export default function ImportRoadmap() {
         )}
 
         {/* Help Text */}
-        <div className="mt-6 rounded-lg bg-blue-50 p-4 border border-blue-200">
-          <p className="text-xs font-medium text-blue-900 mb-2">Need help getting started?</p>
-          <p className="text-xs text-blue-700 mb-3">
-            Your JSON file must include: <code className="bg-blue-100 px-1 rounded">title</code>, <code className="bg-blue-100 px-1 rounded">goal</code>, <code className="bg-blue-100 px-1 rounded">phases</code>, and other required fields.
+        <div className="mt-6 rounded-lg bg-primary/5 p-4 border border-primary/10">
+          <p className="text-xs font-medium text-primary mb-2">Need help getting started?</p>
+          <p className="text-xs text-text-secondary mb-3">
+            Your JSON file must include: <code className="bg-bg-secondary px-1 rounded text-text-primary">title</code>, <code className="bg-bg-secondary px-1 rounded text-text-primary">goal</code>, <code className="bg-bg-secondary px-1 rounded text-text-primary">phases</code>, and other required fields.
           </p>
           <div className="flex flex-wrap gap-2">
             <a
               href="/example-roadmap.json"
               download
-              className="inline-flex items-center gap-1 text-xs font-medium text-blue-600 hover:text-blue-700 underline"
+              className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary-hover underline"
             >
               <FileJson className="h-3 w-3" />
               Download Example
             </a>
-            <span className="text-blue-300">•</span>
+            <span className="text-text-secondary">•</span>
             <a
               href="/json_schema_final.json"
               target="_blank"
-              className="inline-flex items-center gap-1 text-xs font-medium text-blue-600 hover:text-blue-700 underline"
+              className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary-hover underline"
             >
               View Schema →
             </a>

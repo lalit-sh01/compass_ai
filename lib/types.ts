@@ -5,6 +5,7 @@ export interface Resource {
   title: string;
   type: string;
   url?: string; // Optional for resources list, required for suggestedResources
+  notes?: string; // User notes about this resource
 }
 
 export interface Subtask {
@@ -18,12 +19,14 @@ export interface DeepDiveTopic {
   isCompleted: boolean;
   suggestedResources?: Resource[];
   subtasks?: Subtask[];
+  notes?: string; // User notes about this topic
 }
 
 export interface Deliverable {
   description: string;
   isCompleted: boolean;
   subtasks?: Subtask[]; // Some deliverables have nested subtasks
+  notes?: string; // User notes about this deliverable
 }
 
 export interface BuildSection {
@@ -67,6 +70,7 @@ export interface Week {
   buildSection?: BuildSection;
   researchSection?: ResearchSection;
   shareSection?: ShareSection;
+  notes?: string; // User notes about this week
 }
 
 export interface Phase {

@@ -5,7 +5,7 @@
  * Manages edit_history JSONB array in the roadmaps table.
  */
 
-import { createClientForServer } from '@/lib/supabase/server'
+import { createClient } from '@/lib/supabase/server'
 import type { Edit, EditHistory } from '../versioning/edit-history'
 import {
   serializeHistory,
@@ -19,7 +19,7 @@ import {
  * Gets edit history for a roadmap
  */
 export async function getEditHistory(roadmapId: string): Promise<EditHistory> {
-  const supabase = await createClientForServer()
+  const supabase = await createClient()
 
   const { data, error } = await supabase
     .from('roadmaps')
@@ -51,7 +51,7 @@ export async function appendEdit(
   roadmapId: string,
   edit: Omit<Edit, 'id' | 'timestamp'>
 ): Promise<EditHistory> {
-  const supabase = await createClientForServer()
+  const supabase = await createClient()
 
   // Get current history
   const currentHistory = await getEditHistory(roadmapId)
@@ -85,7 +85,7 @@ export async function appendEdit(
  * Performs undo operation (moves current index back)
  */
 export async function undoEdit(roadmapId: string): Promise<EditHistory> {
-  const supabase = await createClientForServer()
+  const supabase = await createClient()
 
   // Get current history
   const currentHistory = await getEditHistory(roadmapId)
@@ -118,7 +118,7 @@ export async function undoEdit(roadmapId: string): Promise<EditHistory> {
  * Performs redo operation (moves current index forward)
  */
 export async function redoEdit(roadmapId: string): Promise<EditHistory> {
-  const supabase = await createClientForServer()
+  const supabase = await createClient()
 
   // Get current history
   const currentHistory = await getEditHistory(roadmapId)
@@ -151,7 +151,7 @@ export async function redoEdit(roadmapId: string): Promise<EditHistory> {
  * Clears all edit history (use with caution)
  */
 export async function clearEditHistory(roadmapId: string): Promise<void> {
-  const supabase = await createClientForServer()
+  const supabase = await createClient()
 
   const { error } = await supabase
     .from('roadmaps')
@@ -182,7 +182,7 @@ export async function updateCustomizations(
   roadmapId: string,
   customizations: Record<string, any>
 ): Promise<void> {
-  const supabase = await createClientForServer()
+  const supabase = await createClient()
 
   const { error } = await supabase
     .from('roadmaps')
@@ -204,7 +204,7 @@ export async function updateCustomizations(
 export async function getCustomizations(
   roadmapId: string
 ): Promise<Record<string, any>> {
-  const supabase = await createClientForServer()
+  const supabase = await createClient()
 
   const { data, error } = await supabase
     .from('roadmaps')

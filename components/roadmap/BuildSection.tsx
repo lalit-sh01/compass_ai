@@ -4,9 +4,10 @@ import type { BuildSection } from '@/lib/types';
 
 interface BuildSectionProps {
   buildSection: BuildSection;
+  weekNumber: number;
 }
 
-export default function BuildSectionComponent({ buildSection }: BuildSectionProps) {
+export default function BuildSectionComponent({ buildSection, weekNumber }: BuildSectionProps) {
   return (
     <div className="space-y-4">
       <div className="flex items-center gap-2 text-orange-600 dark:text-orange-400">
@@ -50,7 +51,12 @@ export default function BuildSectionComponent({ buildSection }: BuildSectionProp
         )}
 
         {buildSection.deliverables && buildSection.deliverables.length > 0 && (
-          <DeliverableList deliverables={buildSection.deliverables} title="Deliverables" />
+          <DeliverableList
+            deliverables={buildSection.deliverables}
+            title="Deliverables"
+            weekNumber={weekNumber}
+            section="build"
+          />
         )}
       </div>
     </div>

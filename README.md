@@ -1,190 +1,111 @@
-# Schema-Driven Roadmap Viewer
+# AI PM Roadmap Generator
 
-A generic, schema-driven roadmap viewer application built with Next.js 14, React, and TypeScript that accepts any JSON file conforming to a defined schema and renders it as an interactive, beautiful UI.
+A powerful SaaS application that generates personalized, week-by-week learning roadmaps for Product Managers using AI agents. It combines an intelligent assessment system with a beautiful, schema-driven roadmap viewer.
 
-![Next.js](https://img.shields.io/badge/Next.js-16.0.3-black)
-![React](https://img.shields.io/badge/React-19.2.0-blue)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38bdf8)
+![Next.js 16](https://img.shields.io/badge/Next.js-16.0-black)
+![React 19](https://img.shields.io/badge/React-19.0-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38bdf8)
+![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-green)
+![Clerk](https://img.shields.io/badge/Auth-Clerk-purple)
 
-## Features
+## 🚀 Features
 
-### Core Functionality
-- 📤 **File Upload**: Drag & drop or browse for JSON files
-- 🌐 **URL Loading**: Load roadmaps from remote URLs
-- ✅ **Schema Validation**: AJV-based validation with detailed error reporting
-- 🎨 **Beautiful UI**: Modern, responsive design with dark mode support
-- 📊 **Progress Tracking**: Visual progress bars at roadmap, phase, and week levels
-- 🔗 **Resource Integration**: Clickable resource links with type badges
-- 🧭 **Intuitive Navigation**: Easy navigation between phases and weeks
+### 🧠 AI-Powered Generation
+*   **Intelligent Assessment**: 10-question adaptive wizard to understand your background.
+*   **Gap Analysis**: AI agents identify your specific skill gaps.
+*   **Custom Roadmaps**: Generates a 14-week personalized plan using GPT-4.
+*   **Strict Validation**: All AI outputs are validated against a strict JSON schema.
 
-### Interactive Features
-- 📱 Fully responsive design (mobile, tablet, desktop)
-- 🌙 Dark mode support
-- ✓ Deliverable checklists with completion tracking
-- 🔍 Resource type badges (YouTube, Article, Guide, etc.)
-- 📈 Real-time progress calculation
-- 🎯 Phase and week-based navigation
-- ↔️ Previous/Next navigation
+### 📊 Interactive Roadmap Viewer
+*   **Phase & Week Views**: Drill down from high-level phases to weekly tasks.
+*   **Progress Tracking**: Track completion of deliverables, topics, and weeks.
+*   **Resource Integration**: Curated resources with type badges (Video, Article, etc.).
+*   **Dark Mode**: Fully responsive design with dark mode support.
 
-## Quick Start
+### 🛠️ SaaS Platform
+*   **Dashboard**: Manage multiple roadmaps.
+*   **Secure**: User-provided OpenAI keys are encrypted (AES-256) before storage.
+*   **Authentication**: Secure sign-up/login via Clerk.
+*   **Persistence**: All data stored in Supabase with Row Level Security (RLS).
+
+## 🏗️ Architecture
+
+The application operates in two modes:
+1.  **SaaS Mode** (`/dashboard`): Full authenticated experience with AI generation and progress tracking.
+2.  **Viewer Mode** (`/viewer`): Public, standalone viewer that accepts any valid JSON roadmap file.
+
+See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for detailed technical documentation.
+
+## 🏁 Getting Started
 
 ### Prerequisites
-- Node.js 20+
-- npm or yarn
+*   Node.js 20+
+*   npm or yarn
+*   Supabase Project
+*   Clerk Application
+*   OpenAI API Key
 
 ### Installation
 
+1.  **Clone and Install**
+    ```bash
+    git clone <repo-url>
+    cd roadmap-viewer
+    npm install
+    ```
+
+2.  **Environment Setup**
+    Copy `.env.example` to `.env.local` and fill in your keys:
+    ```bash
+    cp .env.example .env.local
+    ```
+    *   `NEXT_PUBLIC_CLERK_*`: From Clerk Dashboard.
+    *   `NEXT_PUBLIC_SUPABASE_*`: From Supabase Settings.
+    *   `ENCRYPTION_SECRET`: Generate a 32-char random string.
+
+3.  **Run Development Server**
+    ```bash
+    npm run dev
+    ```
+    Visit [http://localhost:3000](http://localhost:3000).
+
+4.  **Run Tests**
+    ```bash
+    npm test
+    ```
+
+## 📂 Project Structure
+
+```
+app/
+├── (dashboard)/        # Authenticated routes (Dashboard, Onboarding)
+├── viewer/             # Public roadmap viewer
+├── api/                # API Routes (Agents, CRUD, Webhooks)
+components/
+├── roadmap/            # Roadmap rendering components
+├── onboarding/         # Assessment & Wizard components
+lib/
+├── agents/             # AI logic & prompts
+├── db/                 # Database operations
+├── progress/           # Progress tracking logic
+├── validation/         # Schema & Guardrails validation
+```
+
+## 📜 Documentation
+
+*   [Architecture Overview](docs/ARCHITECTURE.md)
+*   [Roadmap & Status](docs/ROADMAP_AND_STATUS.md)
+*   [Antigravity Setup](ANTIGRAVITY_SETUP.md)
+
+## 🧪 Testing
+
+The project uses **Jest** for automated testing.
 ```bash
-# Install dependencies
-npm install
-
-# Run development server
-npm run dev
+npm test          # Run all tests
+npm run test:watch # Run in watch mode
 ```
 
-Visit [http://localhost:3000](http://localhost:3000)
+## 📄 License
 
-### Building for Production
-
-```bash
-npm run build
-npm start
-```
-
-## Usage
-
-### 1. Loading a Roadmap
-
-**Option A: Upload a File**
-1. Click "Browse Files" or drag & drop a JSON file
-2. The file will be validated against the schema
-3. If valid, you'll be redirected to the viewer
-
-**Option B: Load from URL**
-1. Enter a URL to a JSON file
-2. Click "Load"
-3. The roadmap will be fetched and validated
-
-**Option C: Try the Example**
-1. Click "Load example roadmap (final_roadmap.json)"
-2. Instantly see a complete 14-week AI PM roadmap
-
-### 2. Navigating the Roadmap
-
-**Overview Page** (`/viewer`)
-- View overall roadmap stats
-- See all phases
-- Track overall progress
-
-**Phase View** (`/viewer/phase/[id]`)
-- View all weeks in a phase
-- Track phase progress
-- Navigate between phases
-
-**Week View** (`/viewer/week/[number]`)
-- View detailed week information
-- See Build, Research, and Share sections
-- Track deliverables and resources
-- Navigate between weeks
-
-## Project Structure
-
-```
-roadmap-viewer/
-├── app/                        # Next.js app directory
-│   ├── layout.tsx              # Root layout
-│   ├── page.tsx                # Home page (file upload)
-│   ├── viewer/
-│   │   ├── page.tsx            # Roadmap overview
-│   │   ├── phase/[id]/         # Phase details
-│   │   └── week/[number]/      # Week details
-├── components/
-│   ├── input/
-│   │   └── FileUpload.tsx      # File upload component
-│   ├── roadmap/
-│   │   ├── PhaseCard.tsx       # Phase card
-│   │   ├── WeekCard.tsx        # Week card
-│   │   ├── BuildSection.tsx    # Build section
-│   │   ├── ResearchSection.tsx # Research section
-│   │   └── ShareSection.tsx    # Share section
-│   ├── ui/
-│   │   ├── ProgressBar.tsx     # Progress bar
-│   │   ├── ResourceLink.tsx    # Resource link
-│   │   └── DeliverableList.tsx # Deliverable checklist
-│   └── layout/
-│       └── Header.tsx          # Header/navigation
-├── context/
-│   └── RoadmapContext.tsx      # Global state
-├── lib/
-│   ├── types.ts                # TypeScript types
-│   ├── validator.ts            # Schema validation
-│   └── roadmap-utils.ts        # Utility functions
-└── public/
-    ├── json_schema_final.json  # JSON Schema
-    └── final_roadmap.json      # Example roadmap
-```
-
-## Tech Stack
-
-- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
-- **Language**: [TypeScript 5](https://www.typescriptlang.org/)
-- **UI Framework**: [React 19](https://react.dev/)
-- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Validation**: [AJV](https://ajv.js.org/)
-
-## Key Features
-
-### Schema Validation
-- Validates JSON against schema before rendering
-- Provides detailed, human-readable error messages
-- Gracefully handles validation failures
-
-### Flexible Type System
-- TypeScript types handle schema variations
-- Optional fields supported throughout
-- Handles different section structures (build/research/share)
-
-### Progress Tracking
-- Calculates completion percentage at all levels
-- Visual progress bars with color coding
-- Aggregates deliverables from all sections
-
-### Resource Management
-- Aggregates resources from all levels
-- Deduplicates resources
-- Color-coded type badges
-- External link indicators
-
-## Troubleshooting
-
-### Validation Errors
-If your JSON fails validation:
-1. Check the error message for specific field issues
-2. Compare against `json_schema_final.json`
-3. Ensure all required fields are present
-4. Verify data types match the schema
-
-### Build Errors
-If you encounter build errors:
-```bash
-# Clean install
-rm -rf node_modules package-lock.json .next
-npm install
-npm run build
-```
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new):
-
-1. Push your code to GitHub
-2. Import the project on Vercel
-3. Deploy automatically
-
-Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
----
-
-**Ready to visualize your roadmap?** Drop a JSON file and start exploring! 🚀
+Private - Do not distribute.

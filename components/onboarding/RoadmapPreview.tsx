@@ -88,13 +88,13 @@ export default function RoadmapPreview({
 
   if (isGenerating) {
     return (
-      <div className="bg-white rounded-lg shadow-sm p-12 text-center">
+      <div className="bg-surface rounded-lg shadow-sm p-12 text-center">
         <div className="flex flex-col items-center gap-4">
-          <svg className="animate-spin h-12 w-12 text-blue-600" viewBox="0 0 24 24">
+          <svg className="animate-spin h-12 w-12 text-primary" viewBox="0 0 24 24">
             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
           </svg>
-          <h3 className="text-lg font-semibold text-gray-900">Crafting Your Personalized Roadmap...</h3>
+          <h3 className="text-lg font-semibold text-text-primary">Crafting Your Personalized Roadmap...</h3>
           <p className="text-sm text-gray-600">This may take 30-60 seconds. We're creating a comprehensive {assessment.goal.timeframe}-week plan just for you.</p>
         </div>
       </div>
@@ -103,13 +103,13 @@ export default function RoadmapPreview({
 
   if (error) {
     return (
-      <div className="bg-white rounded-lg shadow-sm p-8">
+      <div className="bg-surface rounded-lg shadow-sm p-8">
         <div className="p-4 bg-red-50 border border-red-200 rounded-lg mb-4">
           <p className="text-sm text-red-800">{error}</p>
         </div>
         <button
           onClick={generateRoadmap}
-          className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+          className="px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary-hover"
         >
           Try Again
         </button>
@@ -120,7 +120,7 @@ export default function RoadmapPreview({
   if (!roadmap) return null
 
   return (
-    <div className="bg-white rounded-lg shadow-sm p-8">
+    <div className="bg-surface rounded-lg shadow-sm p-8">
       {/* Success Header */}
       <div className="mb-8 text-center">
         <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
@@ -128,7 +128,7 @@ export default function RoadmapPreview({
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h2 className="text-3xl font-bold text-gray-900 mb-2">Your Roadmap is Ready!</h2>
+        <h2 className="text-3xl font-bold text-text-primary mb-2">Your Roadmap is Ready!</h2>
         <p className="text-gray-600">
           We've created a comprehensive {roadmap.totalDurationWeeks}-week learning plan tailored to your goals.
         </p>
@@ -138,15 +138,15 @@ export default function RoadmapPreview({
       <div className="mb-8 space-y-6">
         {/* Title and Goal */}
         <div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-2">{roadmap.title}</h3>
-          <p className="text-lg text-gray-700">{roadmap.goal}</p>
+          <h3 className="text-2xl font-bold text-text-primary mb-2">{roadmap.title}</h3>
+          <p className="text-lg text-text-secondary">{roadmap.goal}</p>
         </div>
 
         {/* Key Metrics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="p-4 bg-blue-50 rounded-lg">
-            <div className="text-2xl font-bold text-blue-900">{roadmap.totalDurationWeeks}</div>
-            <div className="text-sm text-blue-700">Weeks</div>
+          <div className="p-4 bg-primary/5 rounded-lg">
+            <div className="text-2xl font-bold text-text-primary">{roadmap.totalDurationWeeks}</div>
+            <div className="text-sm text-text-secondary">Weeks</div>
           </div>
           <div className="p-4 bg-green-50 rounded-lg">
             <div className="text-2xl font-bold text-green-900">{roadmap.phases.length}</div>
@@ -164,16 +164,16 @@ export default function RoadmapPreview({
 
         {/* Phases Overview */}
         <div>
-          <h4 className="font-semibold text-gray-900 mb-3">Learning Phases</h4>
+          <h4 className="font-semibold text-text-primary mb-3">Learning Phases</h4>
           <div className="space-y-3">
             {roadmap.phases.map((phase) => (
               <div key={phase.phaseNumber} className="p-4 border border-gray-200 rounded-lg">
                 <div className="flex items-start justify-between mb-2">
                   <div>
-                    <span className="text-sm font-medium text-blue-600">Phase {phase.phaseNumber}</span>
-                    <h5 className="font-semibold text-gray-900">{phase.title}</h5>
+                    <span className="text-sm font-medium text-primary">Phase {phase.phaseNumber}</span>
+                    <h5 className="font-semibold text-text-primary">{phase.title}</h5>
                   </div>
-                  <span className="text-sm text-gray-500">{phase.weekRange}</span>
+                  <span className="text-sm text-text-secondary">{phase.weekRange}</span>
                 </div>
                 <p className="text-sm text-gray-600">{phase.summary}</p>
               </div>
@@ -183,11 +183,11 @@ export default function RoadmapPreview({
 
         {/* Core Skills */}
         <div>
-          <h4 className="font-semibold text-gray-900 mb-3">Core Skills You'll Master</h4>
+          <h4 className="font-semibold text-text-primary mb-3">Core Skills You'll Master</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {roadmap.coreSkills.slice(0, 6).map((skill, i) => (
               <div key={i} className="p-3 bg-gray-50 rounded-lg">
-                <div className="font-medium text-gray-900 text-sm mb-1">{skill.skill}</div>
+                <div className="font-medium text-text-primary text-sm mb-1">{skill.skill}</div>
                 <div className="text-xs text-gray-600">{skill.description}</div>
               </div>
             ))}
@@ -206,7 +206,7 @@ export default function RoadmapPreview({
       <div className="flex items-center justify-between pt-6 border-t border-gray-200">
         <button
           onClick={generateRoadmap}
-          className="px-4 py-2 text-gray-700 hover:text-gray-900 font-medium"
+          className="px-4 py-2 text-text-secondary hover:text-text-primary font-medium"
         >
           Regenerate
         </button>
@@ -214,7 +214,7 @@ export default function RoadmapPreview({
         <button
           onClick={handleSave}
           disabled={isSaving}
-          className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
+          className="px-8 py-3 bg-primary text-white rounded-lg hover:bg-primary-hover disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
         >
           {isSaving ? (
             <span className="flex items-center gap-2">

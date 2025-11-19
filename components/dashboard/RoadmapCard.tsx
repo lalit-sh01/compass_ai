@@ -10,11 +10,11 @@ interface RoadmapCardProps {
 
 export default function RoadmapCard({ roadmap, onDelete }: RoadmapCardProps) {
   const statusColors = {
-    not_started: 'bg-gray-100 text-gray-800',
-    in_progress: 'bg-blue-100 text-blue-800',
-    completed: 'bg-green-100 text-green-800',
-    paused: 'bg-yellow-100 text-yellow-800',
-    archived: 'bg-gray-100 text-gray-600',
+    not_started: 'bg-bg-secondary text-text-secondary',
+    in_progress: 'bg-primary/10 text-primary',
+    completed: 'bg-green-500/10 text-green-700 dark:text-green-400',
+    paused: 'bg-yellow-500/10 text-yellow-700 dark:text-yellow-400',
+    archived: 'bg-gray-500/10 text-gray-600 dark:text-gray-400',
   }
 
   const statusLabels = {
@@ -43,29 +43,28 @@ export default function RoadmapCard({ roadmap, onDelete }: RoadmapCardProps) {
   return (
     <Link
       href={`/viewer?roadmapId=${roadmap.id}`}
-      className="group block bg-white rounded-lg border-2 border-gray-200 hover:border-blue-600 hover:shadow-md transition-all p-6"
+      className="group block bg-surface rounded-md border border-border hover:border-primary hover:shadow-md transition-all p-[var(--space-6)]"
     >
       {/* Header */}
       <div className="flex items-start justify-between mb-3">
         <div className="flex-1">
-          <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-2">
+          <h3 className="text-lg font-semibold text-text-primary group-hover:text-primary transition-colors line-clamp-2">
             {roadmap.title}
           </h3>
         </div>
         <span
-          className={`flex-shrink-0 ml-3 px-2 py-1 rounded-full text-xs font-medium ${
-            statusColors[roadmap.status]
-          }`}
+          className={`flex-shrink-0 ml-3 px-2 py-1 rounded-full text-xs font-medium ${statusColors[roadmap.status]
+            }`}
         >
           {statusLabels[roadmap.status]}
         </span>
       </div>
 
       {/* Goal */}
-      <p className="text-sm text-gray-600 line-clamp-2 mb-4">{roadmap.goal}</p>
+      <p className="text-sm text-text-secondary line-clamp-2 mb-4">{roadmap.goal}</p>
 
       {/* Metadata */}
-      <div className="flex items-center gap-4 text-xs text-gray-500 mb-4">
+      <div className="flex items-center gap-4 text-xs text-text-tertiary mb-4">
         <div className="flex items-center gap-1">
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path
@@ -93,9 +92,9 @@ export default function RoadmapCard({ roadmap, onDelete }: RoadmapCardProps) {
       {/* Progress Bar (if in progress) */}
       {roadmap.status === 'in_progress' && (
         <div className="mb-4">
-          <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+          <div className="h-2 bg-bg-secondary rounded-full overflow-hidden">
             <div
-              className="h-full bg-blue-600 transition-all"
+              className="h-full bg-primary transition-all"
               style={{ width: '0%' }} // TODO: Calculate actual progress
             />
           </div>
@@ -103,14 +102,14 @@ export default function RoadmapCard({ roadmap, onDelete }: RoadmapCardProps) {
       )}
 
       {/* Actions */}
-      <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+      <div className="flex items-center justify-between pt-4 border-t border-border">
         <button
           onClick={handleDelete}
-          className="text-sm text-red-600 hover:text-red-700 font-medium"
+          className="text-sm text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 font-medium"
         >
           Delete
         </button>
-        <span className="text-sm text-blue-600 group-hover:text-blue-700 font-medium">
+        <span className="text-sm text-primary group-hover:text-primary-hover font-medium">
           View Roadmap →
         </span>
       </div>

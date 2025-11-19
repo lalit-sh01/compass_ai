@@ -4,9 +4,10 @@ import type { ShareSection } from '@/lib/types';
 
 interface ShareSectionProps {
   shareSection: ShareSection;
+  weekNumber: number;
 }
 
-export default function ShareSectionComponent({ shareSection }: ShareSectionProps) {
+export default function ShareSectionComponent({ shareSection, weekNumber }: ShareSectionProps) {
   return (
     <div className="space-y-4">
       <div className="flex items-center gap-2 text-green-600 dark:text-green-400">
@@ -43,7 +44,12 @@ export default function ShareSectionComponent({ shareSection }: ShareSectionProp
 
         {/* Share Deliverables (some weeks have these) */}
         {shareSection.deliverables && shareSection.deliverables.length > 0 && (
-          <DeliverableList deliverables={shareSection.deliverables} title="Deliverables" />
+          <DeliverableList
+            deliverables={shareSection.deliverables}
+            title="Deliverables"
+            weekNumber={weekNumber}
+            section="share"
+          />
         )}
       </div>
     </div>

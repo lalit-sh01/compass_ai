@@ -37,7 +37,7 @@ export default function OnboardingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <div className="min-h-screen bg-bg-primary py-8">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         {/* Progress Steps */}
         <div className="mb-8">
@@ -104,13 +104,12 @@ function Step({
   return (
     <div className="flex flex-col items-center gap-2">
       <div
-        className={`flex h-12 w-12 items-center justify-center rounded-full border-2 font-semibold transition-colors ${
-          active
-            ? 'border-blue-600 bg-blue-600 text-white'
+        className={`flex h-12 w-12 items-center justify-center rounded-full border-2 font-semibold transition-colors ${active
+            ? 'border-primary bg-primary text-on-primary'
             : completed
-            ? 'border-green-600 bg-green-600 text-white'
-            : 'border-gray-300 bg-white text-gray-400'
-        }`}
+              ? 'border-green-600 bg-green-600 text-white'
+              : 'border-border bg-surface text-text-tertiary'
+          }`}
       >
         {completed ? (
           <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -121,9 +120,8 @@ function Step({
         )}
       </div>
       <span
-        className={`text-sm font-medium ${
-          active ? 'text-blue-600' : completed ? 'text-green-600' : 'text-gray-500'
-        }`}
+        className={`text-sm font-medium ${active ? 'text-primary' : completed ? 'text-green-600' : 'text-text-secondary'
+          }`}
       >
         {label}
       </span>
@@ -134,7 +132,7 @@ function Step({
 function Connector({ completed }: { completed: boolean }) {
   return (
     <div
-      className={`h-0.5 w-24 transition-colors ${completed ? 'bg-green-600' : 'bg-gray-300'}`}
+      className={`h-0.5 w-24 transition-colors ${completed ? 'bg-green-600' : 'bg-border'}`}
     />
   )
 }
