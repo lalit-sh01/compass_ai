@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: backend
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: asyncpg>=0.30.0
+Requires-Dist: cryptography>=46.0.3
+Requires-Dist: fastapi>=0.121.3
+Requires-Dist: httpx>=0.28.1
+Requires-Dist: openai>=2.8.1
+Requires-Dist: pydantic-settings>=2.12.0
+Requires-Dist: pyjwt>=2.10.1
+Requires-Dist: pytest>=9.0.1
+Requires-Dist: python-multipart>=0.0.20
+Requires-Dist: sqlmodel>=0.0.27
+Requires-Dist: uvicorn>=0.38.0
