@@ -28,6 +28,7 @@ export default function RootLayout({
       <html lang="en" suppressHydrationWarning>
         <body
           className={`${geistMono.variable} antialiased bg-bg-primary text-text-primary transition-colors duration-300`}
+          suppressHydrationWarning
         >
           <ThemeProvider
             attribute="data-theme"
