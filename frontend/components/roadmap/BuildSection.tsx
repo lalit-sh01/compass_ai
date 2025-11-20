@@ -50,6 +50,7 @@ export default function BuildSectionComponent({ buildSection, weekNumber }: Buil
           </div>
         )}
 
+
         {buildSection.deliverables && buildSection.deliverables.length > 0 && (
           <DeliverableList
             deliverables={buildSection.deliverables}

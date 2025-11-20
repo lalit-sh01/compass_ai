@@ -1,0 +1,2468 @@
+[00:00:01.183] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:01.265] Server  LOG      ✓ Ready in 1042ms
+[00:00:05.850] Server  LOG      ○ Compiling / ...
+[00:00:07.780] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:07.780] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:08.778] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:00:08.778] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:00:09.775] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:00:09.775] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:00:17.526] Server  ERROR   [API Client] Request failed: {}
+[00:00:37.473] Browser ERROR   In HTML, %s cannot be a descendant of <%s>.
+This will cause a hydration error.%s <button> button 
+
+  ...
+    <RedirectBoundary>
+      <RedirectErrorBoundary router={{...}}>
+        <InnerLayoutRouter url="/viewer/we..." tree={[...]} params={{number:"1"}} cacheNode={{lazyData:null, ...}} ...>
+          <SegmentViewNode type="page" pagePath="viewer/wee...">
+            <SegmentTrieNode>
+            <ClientPageRoot Component={function WeekPage} serverProvidedParams={{...}}>
+              <WeekPage params={Promise} searchParams={Promise}>
+                <SelectionProvider>
+                  <div className="max-w-4xl ...">
+                    <div>
+                    <div className="mb-8">
+                      <div>
+                      <h1>
+                      <p>
+                      <div>
+                      <ProgressBar>
+                      <div className="mt-6">
+                        <NoteDisplay entityType="week" entityId="w1" content={null} ...>
+                          <div className="border bor...">
+>                           <button
+>                             onClick={function onClick}
+>                             className="w-full flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 hove..."
+>                           >
+                              <div>
+                              <div className="flex items...">
+>                               <button
+>                                 onClick={function onClick}
+>                                 className="p-1 text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-..."
+>                                 title="Edit note"
+>                               >
+                    ...
+          ...
+        ...
+
+[00:00:37.473] Browser ERROR   <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. button <button>
+[00:01:42.074] Server  ERROR   [API Client] Request failed: {}
+[00:01:49.066] Server  ERROR   [API Client] Request failed: {}
+[00:02:27.462] Server  ERROR   [API Client] Request failed: {}
+[00:20:38.017] Server  LOG      ✓ Compiled in 229ms
+[00:21:11.177] Server  LOG      ✓ Compiled in 261ms
+[00:21:59.845] Server  LOG      ✓ Compiled in 198ms
+[00:22:00.783] Browser ERROR   uncaughtError: ReferenceError: Sidebar is not defined
+[00:22:01.320] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:22:01.336] Server  LOG      ✓ Compiled in 116ms
+[00:22:02.639] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:22:04.776] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:22:04.776] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:22:46.326] Server  ERROR   [API Client] Request failed: {}
+[00:22:46.413] Server  ERROR   [API Client] Request failed: {}
+[00:22:56.921] Browser ERROR   In HTML, %s cannot be a descendant of <%s>.
+This will cause a hydration error.%s <button> button 
+
+  ...
+    <SegmentViewNode type="page" pagePath="viewer/wee...">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function WeekPage} serverProvidedParams={{...}}>
+        <WeekPage params={Promise} searchParams={Promise}>
+          <SelectionProvider>
+            <div className="max-w-7xl ...">
+              <div>
+              <div>
+              <div className="grid grid-...">
+                <div>
+                <div className="lg:col-span-1">
+                  <Sidebar>
+                    <div className={"space-y-..."}>
+                      <div>
+                      <DeliverablesList>
+                      <div className="bg-surface...">
+                        <NoteDisplay entityType="week" entityId="w1" content={null} ...>
+                          <div className="border bor...">
+>                           <button
+>                             onClick={function onClick}
+>                             className="w-full flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 hove..."
+>                           >
+                              <div>
+                              <div className="flex items...">
+>                               <button
+>                                 onClick={function onClick}
+>                                 className="p-1 text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-..."
+>                                 title="Edit note"
+>                               >
+              ...
+    ...
+
+[00:22:56.921] Browser ERROR   <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. button <button>
+[00:25:06.465] Browser LOG     Toggle w1-d0-build true
+[00:25:07.131] Browser LOG     Toggle w1-d0-build true
+[00:25:38.213] Server  LOG      ✓ Compiled in 139ms
+[00:25:50.148] Server  LOG      ✓ Compiled in 98ms
+[00:44:41.258] Server  LOG      ✓ Compiled in 104ms
+[00:44:51.047] Server  LOG      ✓ Compiled in 90ms
+[00:44:52.343] Server  LOG      ✓ Compiled in 60ms
+[00:45:37.159] Server  LOG      ✓ Compiled in 126ms
+[00:45:37.341] Server  LOG      ✓ Compiled in 153ms
+[00:45:39.171] Server  LOG      ✓ Compiled in 51ms
+[00:46:37.664] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:46:39.778] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:46:39.779] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:47:13.223] Server  ERROR    ⨯ ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:47:14.267] Browser ERROR   uncaughtError: Error: ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:47:14.430] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:14.532] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:14.787] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:14.787] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:14.787] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:14.787] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:14.787] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:14.788] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:14.788] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:14.788] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:14.788] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:14.788] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:27.667] Server  ERROR    ⨯ ./components/experiments/living-space/ProgressPulse.tsx:1:1
+Module not found: Can't resolve '@/lib/utils'
+> 1 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | interface ProgressPulseProps {
+  4 |     isActive: boolean;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:47:27.855] Browser ERROR   uncaughtError: Error: ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:47:28.036] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:28.036] Browser ERROR   ./components/experiments/living-space/ProgressPulse.tsx:1:1
+Module not found: Can't resolve '@/lib/utils'
+> 1 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | interface ProgressPulseProps {
+  4 |     isActive: boolean;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:28.036] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:28.036] Browser ERROR   ./components/experiments/living-space/ProgressPulse.tsx:1:1
+Module not found: Can't resolve '@/lib/utils'
+> 1 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | interface ProgressPulseProps {
+  4 |     isActive: boolean;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:28.786] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:28.786] Browser ERROR   ./components/experiments/living-space/ProgressPulse.tsx:1:1
+Module not found: Can't resolve '@/lib/utils'
+> 1 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | interface ProgressPulseProps {
+  4 |     isActive: boolean;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:28.786] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:28.786] Browser ERROR   ./components/experiments/living-space/ProgressPulse.tsx:1:1
+Module not found: Can't resolve '@/lib/utils'
+> 1 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | interface ProgressPulseProps {
+  4 |     isActive: boolean;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:28.786] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:28.786] Browser ERROR   ./components/experiments/living-space/ProgressPulse.tsx:1:1
+Module not found: Can't resolve '@/lib/utils'
+> 1 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | interface ProgressPulseProps {
+  4 |     isActive: boolean;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:28.786] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:28.786] Browser ERROR   ./components/experiments/living-space/ProgressPulse.tsx:1:1
+Module not found: Can't resolve '@/lib/utils'
+> 1 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | interface ProgressPulseProps {
+  4 |     isActive: boolean;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:28.786] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:28.786] Browser ERROR   ./components/experiments/living-space/ProgressPulse.tsx:1:1
+Module not found: Can't resolve '@/lib/utils'
+> 1 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | interface ProgressPulseProps {
+  4 |     isActive: boolean;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:28.786] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:28.786] Browser ERROR   ./components/experiments/living-space/ProgressPulse.tsx:1:1
+Module not found: Can't resolve '@/lib/utils'
+> 1 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | interface ProgressPulseProps {
+  4 |     isActive: boolean;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:28.788] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:28.788] Browser ERROR   ./components/experiments/living-space/ProgressPulse.tsx:1:1
+Module not found: Can't resolve '@/lib/utils'
+> 1 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | interface ProgressPulseProps {
+  4 |     isActive: boolean;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:28.788] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:28.788] Browser ERROR   ./components/experiments/living-space/ProgressPulse.tsx:1:1
+Module not found: Can't resolve '@/lib/utils'
+> 1 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | interface ProgressPulseProps {
+  4 |     isActive: boolean;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:28.788] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:47:28.788] Browser ERROR   ./components/experiments/living-space/ProgressPulse.tsx:1:1
+Module not found: Can't resolve '@/lib/utils'
+> 1 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | interface ProgressPulseProps {
+  4 |     isActive: boolean;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:27.996] Server  ERROR    ⨯ ./components/experiments/living-space/ProgressPulse.tsx:1:1
+Module not found: Can't resolve '@/lib/utils'
+> 1 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | interface ProgressPulseProps {
+  4 |     isActive: boolean;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:49:28.251] Browser ERROR   uncaughtError: Error: ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:49:28.411] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:28.412] Browser ERROR   ./components/experiments/living-space/ProgressPulse.tsx:1:1
+Module not found: Can't resolve '@/lib/utils'
+> 1 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | interface ProgressPulseProps {
+  4 |     isActive: boolean;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:28.513] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:28.513] Browser ERROR   ./components/experiments/living-space/ProgressPulse.tsx:1:1
+Module not found: Can't resolve '@/lib/utils'
+> 1 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | interface ProgressPulseProps {
+  4 |     isActive: boolean;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:28.783] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:28.783] Browser ERROR   ./components/experiments/living-space/ProgressPulse.tsx:1:1
+Module not found: Can't resolve '@/lib/utils'
+> 1 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | interface ProgressPulseProps {
+  4 |     isActive: boolean;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:28.783] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:28.783] Browser ERROR   ./components/experiments/living-space/ProgressPulse.tsx:1:1
+Module not found: Can't resolve '@/lib/utils'
+> 1 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | interface ProgressPulseProps {
+  4 |     isActive: boolean;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:28.784] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:28.784] Browser ERROR   ./components/experiments/living-space/ProgressPulse.tsx:1:1
+Module not found: Can't resolve '@/lib/utils'
+> 1 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | interface ProgressPulseProps {
+  4 |     isActive: boolean;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:28.784] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:28.784] Browser ERROR   ./components/experiments/living-space/ProgressPulse.tsx:1:1
+Module not found: Can't resolve '@/lib/utils'
+> 1 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | interface ProgressPulseProps {
+  4 |     isActive: boolean;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:28.786] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:28.786] Browser ERROR   ./components/experiments/living-space/ProgressPulse.tsx:1:1
+Module not found: Can't resolve '@/lib/utils'
+> 1 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | interface ProgressPulseProps {
+  4 |     isActive: boolean;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:28.786] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:28.786] Browser ERROR   ./components/experiments/living-space/ProgressPulse.tsx:1:1
+Module not found: Can't resolve '@/lib/utils'
+> 1 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | interface ProgressPulseProps {
+  4 |     isActive: boolean;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:28.787] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:28.787] Browser ERROR   ./components/experiments/living-space/ProgressPulse.tsx:1:1
+Module not found: Can't resolve '@/lib/utils'
+> 1 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | interface ProgressPulseProps {
+  4 |     isActive: boolean;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:28.787] Browser ERROR   ./components/experiments/smart-stream/SmartSection.tsx:5:1
+Module not found: Can't resolve '@/lib/utils'
+  3 | import { useState } from 'react';
+  4 | import { ChevronDown, ChevronUp, Lock, CheckCircle2, Circle } from 'lucide-react';
+> 5 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 |
+  7 | interface SmartSectionProps {
+  8 |     title: string;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/smart-stream/SmartSection.tsx
+    ./app/viewer/experiments/smart-stream/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:28.787] Browser ERROR   ./components/experiments/living-space/ProgressPulse.tsx:1:1
+Module not found: Can't resolve '@/lib/utils'
+> 1 | import { cn } from '@/lib/utils';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 |
+  3 | interface ProgressPulseProps {
+  4 |     isActive: boolean;
+
+Import map: aliased to relative './lib/utils' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:32.871] Server  ERROR    ⨯ ./lib/utils.ts:1:1
+Module not found: Can't resolve 'clsx'
+> 1 | import { type ClassValue, clsx } from "clsx";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { twMerge } from "tailwind-merge";
+  3 |
+  4 | export function cn(...inputs: ClassValue[]) {
+
+
+
+Import trace:
+  Server Component:
+    ./lib/utils.ts
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:49:32.873] Server  ERROR    ⨯ ./lib/utils.ts:1:1
+Module not found: Can't resolve 'clsx'
+> 1 | import { type ClassValue, clsx } from "clsx";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { twMerge } from "tailwind-merge";
+  3 |
+  4 | export function cn(...inputs: ClassValue[]) {
+
+
+
+Import trace:
+  Server Component:
+    ./lib/utils.ts
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:49:32.874] Server  ERROR    ⨯ ./lib/utils.ts:2:1
+Module not found: Can't resolve 'tailwind-merge'
+  1 | import { type ClassValue, clsx } from "clsx";
+> 2 | import { twMerge } from "tailwind-merge";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export function cn(...inputs: ClassValue[]) {
+  5 |     return twMerge(clsx(inputs));
+
+
+
+Import trace:
+  Server Component:
+    ./lib/utils.ts
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:49:32.881] Server  ERROR    ⨯ ./lib/utils.ts:2:1
+Module not found: Can't resolve 'tailwind-merge'
+  1 | import { type ClassValue, clsx } from "clsx";
+> 2 | import { twMerge } from "tailwind-merge";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export function cn(...inputs: ClassValue[]) {
+  5 |     return twMerge(clsx(inputs));
+
+
+
+Import trace:
+  Server Component:
+    ./lib/utils.ts
+    ./components/experiments/living-space/ProgressPulse.tsx
+    ./app/viewer/experiments/living-space/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:49:32.884] Server  ERROR    ⨯ ./lib/utils.ts:1:1
+Module not found: Can't resolve 'clsx'
+> 1 | import { type ClassValue, clsx } from "clsx";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { twMerge } from "tailwind-merge";
+  3 |
+  4 | export function cn(...inputs: ClassValue[]) {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./lib/utils.ts [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/utils.ts [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:49:32.887] Server  ERROR    ⨯ ./lib/utils.ts:1:1
+Module not found: Can't resolve 'clsx'
+> 1 | import { type ClassValue, clsx } from "clsx";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { twMerge } from "tailwind-merge";
+  3 |
+  4 | export function cn(...inputs: ClassValue[]) {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./lib/utils.ts [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/utils.ts [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:49:32.889] Server  ERROR    ⨯ ./lib/utils.ts:1:1
+Module not found: Can't resolve 'clsx'
+> 1 | import { type ClassValue, clsx } from "clsx";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { twMerge } from "tailwind-merge";
+  3 |
+  4 | export function cn(...inputs: ClassValue[]) {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./lib/utils.ts [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/utils.ts [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:49:32.889] Server  ERROR    ⨯ ./lib/utils.ts:1:1
+Module not found: Can't resolve 'clsx'
+> 1 | import { type ClassValue, clsx } from "clsx";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { twMerge } from "tailwind-merge";
+  3 |
+  4 | export function cn(...inputs: ClassValue[]) {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./lib/utils.ts [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/utils.ts [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:49:32.890] Server  ERROR    ⨯ ./lib/utils.ts:2:1
+Module not found: Can't resolve 'tailwind-merge'
+  1 | import { type ClassValue, clsx } from "clsx";
+> 2 | import { twMerge } from "tailwind-merge";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export function cn(...inputs: ClassValue[]) {
+  5 |     return twMerge(clsx(inputs));
+
+
+
+Import traces:
+  Client Component Browser:
+    ./lib/utils.ts [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/utils.ts [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:49:32.892] Server  ERROR    ⨯ ./lib/utils.ts:2:1
+Module not found: Can't resolve 'tailwind-merge'
+  1 | import { type ClassValue, clsx } from "clsx";
+> 2 | import { twMerge } from "tailwind-merge";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export function cn(...inputs: ClassValue[]) {
+  5 |     return twMerge(clsx(inputs));
+
+
+
+Import traces:
+  Client Component Browser:
+    ./lib/utils.ts [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/utils.ts [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:49:32.892] Server  ERROR    ⨯ ./lib/utils.ts:2:1
+Module not found: Can't resolve 'tailwind-merge'
+  1 | import { type ClassValue, clsx } from "clsx";
+> 2 | import { twMerge } from "tailwind-merge";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export function cn(...inputs: ClassValue[]) {
+  5 |     return twMerge(clsx(inputs));
+
+
+
+Import traces:
+  Client Component Browser:
+    ./lib/utils.ts [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/utils.ts [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:49:32.892] Server  ERROR    ⨯ ./lib/utils.ts:2:1
+Module not found: Can't resolve 'tailwind-merge'
+  1 | import { type ClassValue, clsx } from "clsx";
+> 2 | import { twMerge } from "tailwind-merge";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export function cn(...inputs: ClassValue[]) {
+  5 |     return twMerge(clsx(inputs));
+
+
+
+Import traces:
+  Client Component Browser:
+    ./lib/utils.ts [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/utils.ts [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:49:32.998] Browser ERROR   ./lib/utils.ts:1:1
+Module not found: Can't resolve 'clsx'
+> 1 | import { type ClassValue, clsx } from "clsx";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { twMerge } from "tailwind-merge";
+  3 |
+  4 | export function cn(...inputs: ClassValue[]) {
+
+Import traces:
+  Client Component Browser:
+    ./lib/utils.ts [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/utils.ts [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:32.998] Browser ERROR   ./lib/utils.ts:2:1
+Module not found: Can't resolve 'tailwind-merge'
+  1 | import { type ClassValue, clsx } from "clsx";
+> 2 | import { twMerge } from "tailwind-merge";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export function cn(...inputs: ClassValue[]) {
+  5 |     return twMerge(clsx(inputs));
+
+Import traces:
+  Client Component Browser:
+    ./lib/utils.ts [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/utils.ts [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:33.776] Browser ERROR   ./lib/utils.ts:1:1
+Module not found: Can't resolve 'clsx'
+> 1 | import { type ClassValue, clsx } from "clsx";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { twMerge } from "tailwind-merge";
+  3 |
+  4 | export function cn(...inputs: ClassValue[]) {
+
+Import traces:
+  Client Component Browser:
+    ./lib/utils.ts [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/utils.ts [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:33.776] Browser ERROR   ./lib/utils.ts:2:1
+Module not found: Can't resolve 'tailwind-merge'
+  1 | import { type ClassValue, clsx } from "clsx";
+> 2 | import { twMerge } from "tailwind-merge";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export function cn(...inputs: ClassValue[]) {
+  5 |     return twMerge(clsx(inputs));
+
+Import traces:
+  Client Component Browser:
+    ./lib/utils.ts [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/utils.ts [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:33.776] Browser ERROR   ./lib/utils.ts:1:1
+Module not found: Can't resolve 'clsx'
+> 1 | import { type ClassValue, clsx } from "clsx";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { twMerge } from "tailwind-merge";
+  3 |
+  4 | export function cn(...inputs: ClassValue[]) {
+
+Import traces:
+  Client Component Browser:
+    ./lib/utils.ts [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/utils.ts [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:33.776] Browser ERROR   ./lib/utils.ts:2:1
+Module not found: Can't resolve 'tailwind-merge'
+  1 | import { type ClassValue, clsx } from "clsx";
+> 2 | import { twMerge } from "tailwind-merge";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export function cn(...inputs: ClassValue[]) {
+  5 |     return twMerge(clsx(inputs));
+
+Import traces:
+  Client Component Browser:
+    ./lib/utils.ts [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/utils.ts [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:33.778] Browser ERROR   ./lib/utils.ts:1:1
+Module not found: Can't resolve 'clsx'
+> 1 | import { type ClassValue, clsx } from "clsx";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { twMerge } from "tailwind-merge";
+  3 |
+  4 | export function cn(...inputs: ClassValue[]) {
+
+Import traces:
+  Client Component Browser:
+    ./lib/utils.ts [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/utils.ts [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:33.778] Browser ERROR   ./lib/utils.ts:2:1
+Module not found: Can't resolve 'tailwind-merge'
+  1 | import { type ClassValue, clsx } from "clsx";
+> 2 | import { twMerge } from "tailwind-merge";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export function cn(...inputs: ClassValue[]) {
+  5 |     return twMerge(clsx(inputs));
+
+Import traces:
+  Client Component Browser:
+    ./lib/utils.ts [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/utils.ts [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:33.778] Browser ERROR   ./lib/utils.ts:1:1
+Module not found: Can't resolve 'clsx'
+> 1 | import { type ClassValue, clsx } from "clsx";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import { twMerge } from "tailwind-merge";
+  3 |
+  4 | export function cn(...inputs: ClassValue[]) {
+
+Import traces:
+  Client Component Browser:
+    ./lib/utils.ts [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/utils.ts [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:33.778] Browser ERROR   ./lib/utils.ts:2:1
+Module not found: Can't resolve 'tailwind-merge'
+  1 | import { type ClassValue, clsx } from "clsx";
+> 2 | import { twMerge } from "tailwind-merge";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export function cn(...inputs: ClassValue[]) {
+  5 |     return twMerge(clsx(inputs));
+
+Import traces:
+  Client Component Browser:
+    ./lib/utils.ts [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component Browser]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/utils.ts [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Client Component SSR]
+    ./components/experiments/smart-stream/SmartSection.tsx [Server Component]
+    ./app/viewer/experiments/smart-stream/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:49:45.967] Server  LOG      ✓ Compiled in 642ms
+[00:49:46.681] Server  ERROR    ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <button onClick={function onAction} className=... children=...>
+                  ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:49:46.891] Server  ERROR    ⨯ Error: useSelection must be used within a SelectionProvider
+[00:49:47.194] Server  ERROR    ⨯ Error: useSelection must be used within a SelectionProvider
+[00:49:47.466] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:49:47.587] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:49:47.629] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:49:47.716] Browser ERROR   uncaughtError: Error: useSelection must be used within a SelectionProvider
+[00:49:47.979] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:49:47.979] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:49:49.777] Browser ERROR   uncaughtError: Error: Event handlers cannot be passed to Client Component props.
+  <button onClick={function onAction} className=... children=...>
+                  ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:49:49.777] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:49:49.777] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:49:49.777] Browser ERROR   uncaughtError: Error: useSelection must be used within a SelectionProvider
+[00:49:49.777] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:49:49.777] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:50:08.652] Server  ERROR    ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <button onClick={function onAction} className=... children=...>
+                  ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:50:09.359] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:50:09.556] Browser ERROR   uncaughtError: Error: Event handlers cannot be passed to Client Component props.
+  <button onClick={function onAction} className=... children=...>
+                  ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:50:09.716] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:50:09.716] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:50:40.415] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:50:40.430] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:50:40.658] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:50:40.658] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:50:40.658] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <ClerkProviderBase publishableKey="pk_test_bm..." proxyUrl="" domain="" isSatellite={false} signInUrl="/sign-in" ...>
+      <ClerkContextProvider initialState={null} isomorphicClerkOptions={{...}}>
+        <OrganizationProvider organization={undefined}>
+          <SWRConfigCompat swrConfig={undefined}>
+            <SWRConfig value={undefined}>
+              <__experimental_CheckoutProvider value={undefined}>
+                <RouterTelemetry>
+                <ClerkJSScript>
+                <html lang="en" suppressHydrationWarning={true}>
+                  <body
+                    className="geist_mono_8d43a2aa-module__8Li5zG__variable antialiased bg-bg-primary text-text-primar..."
+-                   data-new-gr-c-s-check-loaded="14.1263.0"
+-                   data-gr-ext-installed=""
+                  >
+
+[00:50:40.677] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:50:40.677] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:50:40.677] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <ClerkProviderBase publishableKey="pk_test_bm..." proxyUrl="" domain="" isSatellite={false} signInUrl="/sign-in" ...>
+      <ClerkContextProvider initialState={null} isomorphicClerkOptions={{...}}>
+        <OrganizationProvider organization={undefined}>
+          <SWRConfigCompat swrConfig={undefined}>
+            <SWRConfig value={undefined}>
+              <__experimental_CheckoutProvider value={undefined}>
+                <RouterTelemetry>
+                <ClerkJSScript>
+                <html lang="en" suppressHydrationWarning={true}>
+                  <body
+                    className="geist_mono_8d43a2aa-module__8Li5zG__variable antialiased bg-bg-primary text-text-primar..."
+-                   data-new-gr-c-s-check-loaded="14.1263.0"
+-                   data-gr-ext-installed=""
+                  >
+
+[00:50:43.153] Server  ERROR    ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <button onClick={function onAction} className=... children=...>
+                  ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:50:43.292] Browser ERROR   uncaughtError: Error: Event handlers cannot be passed to Client Component props.
+  <button onClick={function onAction} className=... children=...>
+                  ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:51:31.532] Server  LOG      ✓ Compiled in 177ms
+[00:51:32.285] Server  ERROR    ⨯ Error: useSelection must be used within a SelectionProvider
+[00:51:32.608] Server  ERROR    ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <button onClick={function onAction} className=... children=...>
+                  ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:51:33.328] Server  ERROR    ⨯ Error: useSelection must be used within a SelectionProvider
+[00:51:33.781] Server  ERROR    ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <button onClick={function onAction} className=... children=...>
+                  ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:51:34.231] Server  ERROR    ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <button onClick={function onAction} className=... children=...>
+                  ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:51:35.144] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:51:35.232] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:51:35.346] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:51:35.456] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:51:35.626] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:51:36.834] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:51:36.835] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:51:36.835] Browser ERROR   uncaughtError: Error: useSelection must be used within a SelectionProvider
+[00:51:37.780] Browser ERROR   uncaughtError: Error: useSelection must be used within a SelectionProvider
+[00:51:37.780] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:51:37.780] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:51:37.780] Browser ERROR   uncaughtError: Error: Event handlers cannot be passed to Client Component props.
+  <button onClick={function onAction} className=... children=...>
+                  ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:51:37.780] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:51:37.780] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:51:37.785] Browser ERROR   uncaughtError: Error: Event handlers cannot be passed to Client Component props.
+  <button onClick={function onAction} className=... children=...>
+                  ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:51:37.785] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:51:37.785] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:51:37.785] Browser ERROR   uncaughtError: Error: Event handlers cannot be passed to Client Component props.
+  <button onClick={function onAction} className=... children=...>
+                  ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:51:37.785] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:51:37.785] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:51:46.747] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:51:46.961] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:51:46.961] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:51:47.930] Browser ERROR   uncaughtError: Error: useSelection must be used within a SelectionProvider
+[00:52:58.645] Server  ERROR    ⨯ Error: useSelection must be used within a SelectionProvider
+[00:52:58.811] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:52:59.069] Browser ERROR   uncaughtError: Error: useSelection must be used within a SelectionProvider
+[00:52:59.069] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:52:59.069] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:53:10.212] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:53:10.430] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:53:10.430] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:53:17.826] Server  LOG      ✓ Compiled in 95ms
+[00:53:18.000] Server  ERROR    ⨯ ReferenceError: SelectionProvider is not defined
+[00:53:18.020] Server  ERROR    ⨯ ReferenceError: SelectionProvider is not defined
+[00:53:18.564] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:53:18.579] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:53:19.393] Browser ERROR   uncaughtError: ReferenceError: SelectionProvider is not defined
+[00:53:19.394] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:53:19.394] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:53:19.779] Browser ERROR   uncaughtError: ReferenceError: SelectionProvider is not defined
+[00:53:19.779] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:53:19.779] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:53:27.879] Server  ERROR    ⨯ ReferenceError: SelectionProvider is not defined
+[00:53:28.019] Browser ERROR   uncaughtError: ReferenceError: SelectionProvider is not defined
+[00:53:32.460] Server  LOG      ✓ Compiled in 98ms
+[00:53:33.391] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:53:33.454] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:53:33.556] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:53:33.556] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:53:34.568] Server  LOG      ✓ Compiled in 76ms
+[00:53:34.776] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <BuildSectionComponent>
+      <div className="space-y-4">
+        <div>
+        ...
+          <div className="space-y-3">
+            <h4>
+            <DndContext sensors={[...]} collisionDetection={function closestCenter} onDragEnd={function handleDragEnd}>
+              <SortableContext items={[...]} strategy={function verticalListSortingStrategy}>
+                <ul className="space-y-3">
+                  <li className="space-y-2">
+                    <DraggableDeliverable id="w1-d0-build" deliverable={{...}} weekNumber={1} index={0} section="build" ...>
+                      <div ref={function useCombinedRefs.useMemo} style={{...}} className="flex items...">
+                        <div
+                          role="button"
+                          tabIndex={0}
+                          aria-disabled={false}
+                          aria-pressed={undefined}
+                          aria-roledescription="sortable"
++                         aria-describedby="DndDescribedBy-0"
+-                         aria-describedby="DndDescribedBy-1"
+                          onPointerDown={function useSyntheticListeners.useMemo}
+                          onKeyDown={function useSyntheticListeners.useMemo}
+                          className="mt-3 cursor-grab active:cursor-grabbing text-gray-300 hover:text-gray-500 dark:te..."
+                        >
+                        ...
+                  <li className="space-y-2">
+                    <DraggableDeliverable id="w1-d1-build" deliverable={{...}} weekNumber={1} index={1} section="build" ...>
+                      <div ref={function useCombinedRefs.useMemo} style={{...}} className="flex items...">
+                        <div
+                          role="button"
+                          tabIndex={0}
+                          aria-disabled={false}
+                          aria-pressed={undefined}
+                          aria-roledescription="sortable"
++                         aria-describedby="DndDescribedBy-0"
+-                         aria-describedby="DndDescribedBy-1"
+                          onPointerDown={function useSyntheticListeners.useMemo}
+                          onKeyDown={function useSyntheticListeners.useMemo}
+                          className="mt-3 cursor-grab active:cursor-grabbing text-gray-300 hover:text-gray-500 dark:te..."
+                        >
+                        ...
+                  <li className="space-y-2">
+                    <DraggableDeliverable id="w1-d2-build" deliverable={{...}} weekNumber={1} index={2} section="build" ...>
+                      <div ref={function useCombinedRefs.useMemo} style={{...}} className="flex items...">
+                        <div
+                          role="button"
+                          tabIndex={0}
+                          aria-disabled={false}
+                          aria-pressed={undefined}
+                          aria-roledescription="sortable"
++                         aria-describedby="DndDescribedBy-0"
+-                         aria-describedby="DndDescribedBy-1"
+                          onPointerDown={function useSyntheticListeners.useMemo}
+                          onKeyDown={function useSyntheticListeners.useMemo}
+                          className="mt-3 cursor-grab active:cursor-grabbing text-gray-300 hover:text-gray-500 dark:te..."
+                        >
+                        ...
+              ...
+              ...
+            ...
+
+[00:53:34.776] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:53:34.776] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:53:36.033] Server  LOG      ✓ Compiled in 49ms
+[00:54:10.014] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:54:10.121] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:54:10.121] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:54:16.763] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:54:16.880] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:54:16.880] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:54:18.314] Server  ERROR    ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <button onClick={function onAction} className=... children=...>
+                  ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:54:18.455] Browser ERROR   uncaughtError: Error: Event handlers cannot be passed to Client Component props.
+  <button onClick={function onAction} className=... children=...>
+                  ^^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:54:54.296] Server  LOG      ✓ Compiled in 337ms
+[00:54:54.430] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:54:55.032] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:54:55.777] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:54:55.777] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:55:17.499] Server  LOG      ✓ Compiled in 0ms
+[00:55:17.873] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:55:18.091] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:55:18.091] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:55:18.249] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:55:18.366] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[00:55:18.366] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[00:56:26.341] Server  ERROR   [API Client] Request failed: {}
+[00:56:39.500] Browser ERROR   In HTML, %s cannot be a descendant of <%s>.
+This will cause a hydration error.%s <button> button 
+
+  ...
+    <SegmentViewNode type="page" pagePath="viewer/wee...">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function WeekPage} serverProvidedParams={{...}}>
+        <WeekPage params={Promise} searchParams={Promise}>
+          <SelectionProvider>
+            <div className="max-w-7xl ...">
+              <div>
+              <div>
+              <div className="grid grid-...">
+                <div>
+                <div className="lg:col-span-1">
+                  <Sidebar>
+                    <div className={"space-y-..."}>
+                      <div>
+                      <div className="bg-surface...">
+                        <NoteDisplay entityType="week" entityId="w1" content={undefined} ...>
+                          <div className="border bor...">
+>                           <button
+>                             onClick={function onClick}
+>                             className="w-full flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 hove..."
+>                           >
+                              <div>
+                              <div className="flex items...">
+>                               <button
+>                                 onClick={function onClick}
+>                                 className="p-1 text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-..."
+>                                 title="Edit note"
+>                               >
+              ...
+    ...
+
+[00:56:39.500] Browser ERROR   <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. button <button>
+[01:03:23.805] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:03:23.927] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[01:03:23.927] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[01:46:09.849] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:46:10.066] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[01:46:10.066] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[01:48:35.343] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:48:35.450] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[01:48:35.450] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[01:49:54.950] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:49:55.082] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[01:49:55.082] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[01:50:16.096] Server  LOG      ✓ Compiled in 612ms
+[01:50:33.600] Server  LOG      ✓ Compiled in 228ms
+[01:56:36.926] Server  LOG      ✓ Compiled in 252ms
+[01:58:15.132] Server  LOG      ✓ Compiled in 250ms
+[01:58:15.198] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:58:15.200] Browser ERROR   uncaughtError: ReferenceError: ScrollFocusWrapper is not defined
+[01:58:15.384] Server  LOG      ✓ Compiled in 60ms
+[01:58:16.622] Server  LOG      ✓ Compiled in 130ms
+[01:58:16.642] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:58:17.384] Server  ERROR    ⨯ Error: aborted
+[01:58:17.546] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:58:19.680] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[01:58:19.680] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[01:58:30.039] Server  LOG      ✓ Compiled in 84ms
+[02:00:45.483] Server  LOG      ✓ Compiled in 191ms
+[02:00:45.615] Browser ERROR   ./app/viewer/experiments/hybrid-flow/page.tsx:136:1
+Parsing ecmascript source code failed
+  134 |         </SelectionProvider>
+  135 |     );
+> 136 | }
+      | ^
+  137 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component Browser]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component SSR]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+[02:00:45.683] Browser ERROR   ./app/viewer/experiments/hybrid-flow/page.tsx:136:1
+Parsing ecmascript source code failed
+  134 |         </SelectionProvider>
+  135 |     );
+> 136 | }
+      | ^
+  137 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component Browser]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component SSR]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+[02:00:45.684] Browser ERROR   ./app/viewer/experiments/hybrid-flow/page.tsx:136:1
+Parsing ecmascript source code failed
+  134 |         </SelectionProvider>
+  135 |     );
+> 136 | }
+      | ^
+  137 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component Browser]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component SSR]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+[02:00:45.686] Browser ERROR   ./app/viewer/experiments/hybrid-flow/page.tsx:136:1
+Parsing ecmascript source code failed
+  134 |         </SelectionProvider>
+  135 |     );
+> 136 | }
+      | ^
+  137 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component Browser]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component SSR]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+[02:00:45.687] Browser ERROR   ./app/viewer/experiments/hybrid-flow/page.tsx:136:1
+Parsing ecmascript source code failed
+  134 |         </SelectionProvider>
+  135 |     );
+> 136 | }
+      | ^
+  137 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component Browser]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component SSR]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+[02:00:55.186] Server  ERROR    ⨯ ./app/viewer/experiments/hybrid-flow/page.tsx:136:1
+Parsing ecmascript source code failed
+  134 |         </SelectionProvider>
+  135 |     );
+> 136 | }
+      | ^
+  137 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component Browser]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component SSR]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+
+
+[02:00:55.317] Browser ERROR   ./app/viewer/experiments/hybrid-flow/page.tsx:136:1
+Parsing ecmascript source code failed
+  134 |         </SelectionProvider>
+  135 |     );
+> 136 | }
+      | ^
+  137 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component Browser]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component SSR]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+[02:00:55.473] Browser ERROR   uncaughtError: Error: ./app/viewer/experiments/hybrid-flow/page.tsx:136:1
+Parsing ecmascript source code failed
+  134 |         </SelectionProvider>
+  135 |     );
+> 136 | }
+      | ^
+  137 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component Browser]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component SSR]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+
+
+[02:00:55.651] Browser ERROR   ./app/viewer/experiments/hybrid-flow/page.tsx:136:1
+Parsing ecmascript source code failed
+  134 |         </SelectionProvider>
+  135 |     );
+> 136 | }
+      | ^
+  137 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component Browser]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component SSR]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+[02:00:55.651] Browser ERROR   ./app/viewer/experiments/hybrid-flow/page.tsx:136:1
+Parsing ecmascript source code failed
+  134 |         </SelectionProvider>
+  135 |     );
+> 136 | }
+      | ^
+  137 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component Browser]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component SSR]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+[02:00:55.680] Browser ERROR   ./app/viewer/experiments/hybrid-flow/page.tsx:136:1
+Parsing ecmascript source code failed
+  134 |         </SelectionProvider>
+  135 |     );
+> 136 | }
+      | ^
+  137 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component Browser]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component SSR]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+[02:00:55.680] Browser ERROR   ./app/viewer/experiments/hybrid-flow/page.tsx:136:1
+Parsing ecmascript source code failed
+  134 |         </SelectionProvider>
+  135 |     );
+> 136 | }
+      | ^
+  137 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component Browser]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component SSR]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+[02:00:55.680] Browser ERROR   ./app/viewer/experiments/hybrid-flow/page.tsx:136:1
+Parsing ecmascript source code failed
+  134 |         </SelectionProvider>
+  135 |     );
+> 136 | }
+      | ^
+  137 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component Browser]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component SSR]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+[02:00:55.681] Browser ERROR   ./app/viewer/experiments/hybrid-flow/page.tsx:136:1
+Parsing ecmascript source code failed
+  134 |         </SelectionProvider>
+  135 |     );
+> 136 | }
+      | ^
+  137 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component Browser]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component SSR]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+[02:00:55.681] Browser ERROR   ./app/viewer/experiments/hybrid-flow/page.tsx:136:1
+Parsing ecmascript source code failed
+  134 |         </SelectionProvider>
+  135 |     );
+> 136 | }
+      | ^
+  137 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component Browser]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component SSR]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+[02:00:55.681] Browser ERROR   ./app/viewer/experiments/hybrid-flow/page.tsx:136:1
+Parsing ecmascript source code failed
+  134 |         </SelectionProvider>
+  135 |     );
+> 136 | }
+      | ^
+  137 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component Browser]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component SSR]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+[02:00:55.681] Browser ERROR   ./app/viewer/experiments/hybrid-flow/page.tsx:136:1
+Parsing ecmascript source code failed
+  134 |         </SelectionProvider>
+  135 |     );
+> 136 | }
+      | ^
+  137 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component Browser]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component SSR]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+[02:00:55.681] Browser ERROR   ./app/viewer/experiments/hybrid-flow/page.tsx:136:1
+Parsing ecmascript source code failed
+  134 |         </SelectionProvider>
+  135 |     );
+> 136 | }
+      | ^
+  137 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component Browser]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component SSR]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+[02:00:55.681] Browser ERROR   ./app/viewer/experiments/hybrid-flow/page.tsx:136:1
+Parsing ecmascript source code failed
+  134 |         </SelectionProvider>
+  135 |     );
+> 136 | }
+      | ^
+  137 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component Browser]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component SSR]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+[02:00:55.681] Browser ERROR   ./app/viewer/experiments/hybrid-flow/page.tsx:136:1
+Parsing ecmascript source code failed
+  134 |         </SelectionProvider>
+  135 |     );
+> 136 | }
+      | ^
+  137 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component Browser]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component SSR]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+[02:00:55.681] Browser ERROR   ./app/viewer/experiments/hybrid-flow/page.tsx:136:1
+Parsing ecmascript source code failed
+  134 |         </SelectionProvider>
+  135 |     );
+> 136 | }
+      | ^
+  137 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component Browser]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component SSR]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+[02:00:55.681] Browser ERROR   ./app/viewer/experiments/hybrid-flow/page.tsx:136:1
+Parsing ecmascript source code failed
+  134 |         </SelectionProvider>
+  135 |     );
+> 136 | }
+      | ^
+  137 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component Browser]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Client Component SSR]
+    ./app/viewer/experiments/hybrid-flow/page.tsx [Server Component]
+[02:01:38.505] Server  LOG      ✓ Compiled in 84ms
+[02:01:39.498] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:01:39.703] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[02:01:39.703] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[02:03:22.353] Server  LOG      ✓ Compiled in 120ms
+[02:03:24.394] Server  LOG      ✓ Compiled in 36ms
+[02:06:26.037] Server  LOG      ✓ Compiled in 227ms
+[02:06:49.176] Server  LOG      ✓ Compiled in 123ms
+[02:06:51.087] Server  LOG      ✓ Compiled in 48ms
+[02:09:16.787] Server  LOG      ✓ Compiled in 162ms
+[02:10:55.310] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:10:56.683] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[02:10:56.683] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[02:13:06.953] Server  LOG      ✓ Compiled in 172ms
+[02:13:08.468] Server  LOG      ✓ Compiled in 46ms
+[02:13:19.960] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:13:20.064] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[02:13:20.064] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[02:15:58.286] Server  LOG      ✓ Compiled in 115ms
+[02:16:24.278] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:16:24.435] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[02:16:24.435] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[02:19:51.354] Server  LOG      ✓ Compiled in 351ms
+[02:19:51.832] Browser ERROR   uncaughtError: ReferenceError: HeroAction is not defined
+[02:19:53.103] Server  LOG      ✓ Compiled in 177ms
+[02:19:53.139] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[02:19:54.144] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:19:55.200] Server  LOG      ✓ Compiled in 124ms
+[02:19:55.680] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[02:19:55.680] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[02:20:08.297] Server  LOG      ✓ Compiled in 137ms
+[02:26:28.558] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:26:28.774] Browser WARN    Clerk: Clerk has been loaded with development keys. Development instances have strict usage limits and should not be used when deploying your application to production. Learn more: https://clerk.com/docs/deployments/overview
+[02:26:28.774] Browser WARN    Clerk: The prop "afterSignInUrl" is deprecated and should be replaced with the new "fallbackRedirectUrl" or "forceRedirectUrl" props instead. Learn more: https://clerk.com/docs/guides/custom-redirects#redirect-url-props
+[02:26:32.199] Server  ERROR   [API Client] Request failed: {}
+[02:28:16.969] Server  LOG      ✓ Compiled in 111ms
+[02:40:52.329] Browser ERROR   [API Client] Request failed: {"endpoint":"/api/roadmaps/undefined","error":{"detail":[{"ctx":{"error":"invalid character: expected an optional prefix of `urn:uuid:` followed by [0-9a-fA-F-], found `u` at 1"},"input":"undefined","loc":["path","roadmap_id"],"msg":"Input should be a valid UUID, invalid character: expected an optional prefix of `urn:uuid:` followed by [0-9a-fA-F-], found `u` at 1","type":"uuid_parsing"}]},"status":422}
+[02:40:52.330] Browser ERROR   Failed to persist roadmap: {}
+[02:40:52.330] Browser ERROR   unhandledRejection: Error: path.roadmap_id - Input should be a valid UUID, invalid character: expected an optional prefix of `urn:uuid:` followed by [0-9a-fA-F-], found `u` at 1
+[02:41:25.779] Server  ERROR   [API Client] Request failed: {}

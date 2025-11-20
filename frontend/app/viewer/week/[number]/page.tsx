@@ -8,14 +8,15 @@ import { useRoadmap } from '@/context/RoadmapContext';
 import BuildSectionComponent from '@/components/roadmap/BuildSection';
 import ResearchSectionComponent from '@/components/roadmap/ResearchSection';
 import ShareSectionComponent from '@/components/roadmap/ShareSection';
-import ProgressBar from '@/components/ui/ProgressBar';
 import { getWeekByNumber, getWeekProgress } from '@/lib/roadmap-utils';
 
+import { HeroAction } from '@/components/viewer/hybrid/HeroAction';
+import { CopilotSidebar } from '@/components/viewer/hybrid/CopilotSidebar';
+import { ScrollFocusWrapper } from '@/components/viewer/hybrid/ScrollFocusWrapper';
 import { SelectionProvider } from '@/context/SelectionContext';
 import { BulkActionsBar } from '@/components/viewer/actions/BulkActionsBar';
 import { SelectionToggle } from '@/components/viewer/controls/SelectionToggle';
-import { NoteDisplay } from '@/components/viewer/notes/NoteDisplay';
-import { useNotes } from '@/hooks/useNotes';
+
 
 export default function WeekPage({ params }: { params: Promise<{ number: string }> }) {
   const router = useRouter();
@@ -48,123 +49,145 @@ export default function WeekPage({ params }: { params: Promise<{ number: string 
     );
   }
 
-  const progress = getWeekProgress(week);
-
   // Find the phase this week belongs to
   const phase = roadmap.phases.find((p) => p.weeks.some((w) => w.weekNumber === weekNumber));
 
-  // Week notes hook
-  const { note: weekNote, saveNote: saveWeekNote } = useNotes({
-    entityType: 'week',
-    entityId: `w${weekNumber}`,
-    weekNumber,
-  });
-
   return (
     <SelectionProvider>
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pb-24">
-        {/* Top Navigation Bar */}
-        <div className="flex items-center justify-between mb-6">
-          <Link
-            href="/viewer"
-            className="inline-flex items-center gap-2 text-sm text-text-secondary hover:text-text-primary"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Back to overview
-          </Link>
-          <SelectionToggle />
-        </div>
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-950 p-6">
+        <div className="mx-auto max-w-[1800px]">
 
-        {/* Header */}
-        <div className="mb-8">
-          <div className="flex items-center gap-3 mb-3">
-            <span className="px-3 py-1 bg-primary text-white-always text-sm font-bold rounded">Week {week.weekNumber}</span>
-            {phase && (
-              <Link
-                href={`/viewer/phase/${phase.phaseNumber}`}
-                className="px-3 py-1 bg-accent-secondary text-primary text-sm font-semibold rounded hover:bg-accent-primary/20 transition-colors"
-              >
-                Phase {phase.phaseNumber}
-              </Link>
-            )}
-            <span className="px-3 py-1 bg-surface text-text-secondary text-sm font-semibold rounded">
-              {week.status}
-            </span>
-          </div>
-
-          <h1 className="text-3xl font-bold text-text-primary mb-2">{week.title}</h1>
-          <p className="text-lg text-text-secondary italic mb-4">{week.theme}</p>
-
-          <div className="flex items-center gap-4 text-sm text-text-secondary mb-6">
-            <span className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
-              {week.totalHours} hours total
-            </span>
-            <span className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
-              Build: {week.timeBreakdown.build}h | Research: {week.timeBreakdown.research}h | Share: {week.timeBreakdown.share}h
-            </span>
-          </div>
-
-          <ProgressBar completed={progress.completed} total={progress.total} percentage={progress.percentage} size="lg" />
-
-          {/* Week Notes */}
-          <div className="mt-6">
-            <NoteDisplay
-              entityType="week"
-              entityId={`w${weekNumber}`}
-              content={weekNote}
-              onSave={saveWeekNote}
-              title="Week Notes"
-            />
-          </div>
-        </div>
-
-        {/* Sections */}
-        <div className="space-y-8">
-          {/* Build Section */}
-          {week.buildSection && (
-            <div className="bg-surface rounded-lg p-6 border border-border">
-              <BuildSectionComponent buildSection={week.buildSection} weekNumber={weekNumber} />
-            </div>
-          )}
-
-          {/* Research Section */}
-          {week.researchSection && (
-            <div className="bg-surface rounded-lg p-6 border border-border">
-              <ResearchSectionComponent researchSection={week.researchSection} weekNumber={weekNumber} />
-            </div>
-          )}
-
-          {/* Share Section */}
-          {week.shareSection && (
-            <div className="bg-surface rounded-lg p-6 border border-border">
-              <ShareSectionComponent shareSection={week.shareSection} weekNumber={weekNumber} />
-            </div>
-          )}
-        </div>
-
-        {/* Navigation */}
-        <div className="flex items-center justify-between mt-8 pt-6 border-t border-border">
-          {weekNumber > 1 && (
+          {/* Navigation / Header */}
+          <div className="flex items-center justify-between mb-8">
             <Link
-              href={`/viewer/week/${weekNumber - 1}`}
-              className="flex items-center gap-2 px-4 py-2 bg-surface text-text-primary rounded-lg hover:bg-accent-secondary transition-colors"
+              href="/viewer"
+              className="inline-flex items-center gap-2 text-sm text-text-secondary hover:text-text-primary"
             >
               <ArrowLeft className="w-4 h-4" />
-              Week {weekNumber - 1}
+              Back to overview
             </Link>
-          )}
-          <div className="flex-1" />
-          {weekNumber < roadmap.totalDurationWeeks && (
-            <Link
-              href={`/viewer/week/${weekNumber + 1}`}
-              className="flex items-center gap-2 px-4 py-2 bg-primary text-white-always rounded-lg hover:bg-primary/90 transition-colors"
-            >
-              Week {weekNumber + 1}
-              <ArrowLeft className="w-4 h-4 rotate-180" />
-            </Link>
-          )}
+            <SelectionToggle />
+          </div>
+
+          <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 items-start">
+
+            {/* Main Content (8 cols = 2/3) */}
+            <div className="xl:col-span-8 pb-32">
+
+              {/* Hero Action */}
+              <div className="mb-20">
+                <HeroAction
+                  title={week.title}
+                  subtitle={week.theme}
+                  type="build"
+                  onAction={() => { }}
+                />
+              </div>
+
+              <div className="space-y-16">
+                {/* 1. Build Section */}
+                {week.buildSection && (
+                  <ScrollFocusWrapper
+                    className="relative transition-all duration-500"
+                    defaultInFocus={true}
+                    rootMargin="-5% 0px -20% 0px"
+                    threshold={0.1}
+                  >
+                    <div className="absolute -left-12 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-500 to-transparent opacity-20 rounded-full hidden xl:block" />
+                    <div className="bg-white dark:bg-gray-900 rounded-xl p-8 shadow-sm border border-gray-100 dark:border-gray-800">
+                      <div className="mb-6 flex items-center justify-between">
+                        <span className="px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 text-xs font-bold uppercase tracking-wider">
+                          Build Phase
+                        </span>
+                        <span className="text-sm text-gray-500">{week.buildSection.hours}h estimated</span>
+                      </div>
+
+                      <BuildSectionComponent
+                        buildSection={week.buildSection}
+                        weekNumber={weekNumber}
+                      />
+                    </div>
+                  </ScrollFocusWrapper>
+                )}
+
+                {/* 2. Research Section */}
+                {week.researchSection && (
+                  <ScrollFocusWrapper
+                    className="relative transition-all duration-500"
+                    threshold={0.1}
+                  >
+                    <div className="absolute -left-12 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 to-transparent opacity-20 rounded-full hidden xl:block" />
+                    <div className="bg-white dark:bg-gray-900 rounded-xl p-8 shadow-sm border border-gray-100 dark:border-gray-800">
+                      <div className="mb-6 flex items-center justify-between">
+                        <span className="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider">
+                          Research Phase
+                        </span>
+                        <span className="text-sm text-gray-500">{week.researchSection.hours}h estimated</span>
+                      </div>
+
+                      <ResearchSectionComponent
+                        researchSection={week.researchSection}
+                        weekNumber={weekNumber}
+                      />
+                    </div>
+                  </ScrollFocusWrapper>
+                )}
+
+                {/* 3. Share Section */}
+                {week.shareSection && (
+                  <ScrollFocusWrapper
+                    className="relative transition-all duration-500"
+                    threshold={0.1}
+                  >
+                    <div className="absolute -left-12 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-500 to-transparent opacity-20 rounded-full hidden xl:block" />
+                    <div className="bg-white dark:bg-gray-900 rounded-xl p-8 shadow-sm border border-gray-100 dark:border-gray-800">
+                      <div className="mb-6 flex items-center justify-between">
+                        <span className="px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-xs font-bold uppercase tracking-wider">
+                          Share Phase
+                        </span>
+                        <span className="text-sm text-gray-500">{week.shareSection.hours}h estimated</span>
+                      </div>
+
+                      <ShareSectionComponent
+                        shareSection={week.shareSection}
+                        weekNumber={weekNumber}
+                      />
+                    </div>
+                  </ScrollFocusWrapper>
+                )}
+
+                {/* Navigation Footer */}
+                <div className="flex items-center justify-between pt-12">
+                  {weekNumber > 1 && (
+                    <Link
+                      href={`/viewer/week/${weekNumber - 1}`}
+                      className="flex items-center gap-2 px-6 py-3 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-full hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors border border-gray-200 dark:border-gray-700 shadow-sm"
+                    >
+                      <ArrowLeft className="w-4 h-4" />
+                      Week {weekNumber - 1}
+                    </Link>
+                  )}
+                  <div className="flex-1" />
+                  {weekNumber < roadmap.totalDurationWeeks && (
+                    <Link
+                      href={`/viewer/week/${weekNumber + 1}`}
+                      className="flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20"
+                    >
+                      Week {weekNumber + 1}
+                      <ArrowLeft className="w-4 h-4 rotate-180" />
+                    </Link>
+                  )}
+                </div>
+
+              </div>
+            </div>
+
+            {/* Right Margin: Copilot (4 cols = 1/3) */}
+            <div className="hidden xl:flex xl:col-span-4 flex-col gap-6 sticky top-8 h-[calc(100vh-4rem)]">
+              <CopilotSidebar />
+            </div>
+
+          </div>
         </div>
 
         <BulkActionsBar />
