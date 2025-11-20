@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# Testing & Linting
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environment Variables
+.env
+.env.local
+
+# Editor
+.vscode/
+.idea/
+*.swp
