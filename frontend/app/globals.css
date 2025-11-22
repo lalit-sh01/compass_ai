@@ -144,25 +144,25 @@
 
 /* Dark Mode - Warm Theme with Coral Accent */
 .dark {
-  /* Backgrounds - Properly light for visible cards */
-  --color-bg-primary: #1F1F1F;
-  --color-bg-secondary: #353535;
-  --color-surface: #505050;
+  /* Backgrounds - Premium Dark */
+  --color-bg-primary: #09090B; /* Zinc-950 like */
+  --color-bg-secondary: #18181B; /* Zinc-900 like */
+  --color-surface: #27272A; /* Zinc-800 like */
 
-  /* Accents - Same coral as light mode */
+  /* Accents - Same coral as light mode but adjusted for dark */
   --color-accent-primary: #D4654F;
   --color-accent-hover: #E08A78;
   --color-accent-light: #F5D5C8;
   --color-accent-secondary: rgba(212, 101, 79, 0.15);
   --color-text-on-primary: #FFFFFF;
 
-  /* Text - Pure white for maximum contrast */
-  --color-text-primary: #FFFFFF;
-  --color-text-secondary: #E0E0E0;
-  --color-text-tertiary: #B0B0B0;
+  /* Text - High contrast but not harsh white */
+  --color-text-primary: #FAFAFA;
+  --color-text-secondary: #A1A1AA;
+  --color-text-tertiary: #71717A;
 
-  /* Borders - Visible separation */
-  --color-border: #707070;
+  /* Borders - Subtle separation */
+  --color-border: rgba(255, 255, 255, 0.08);
 
   /* Shadows - Deeper shadows for dark mode */
   --shadow-small: 0 2px 8px rgba(0, 0, 0, 0.4);
@@ -171,7 +171,7 @@
   --shadow-focus: 0 0 0 3px rgba(212, 101, 79, 0.3);
 
   /* Glow Effect for dark mode */
-  --glow-accent: 0 0 20px rgba(212, 101, 79, 0.3);
+  --glow-accent: 0 0 20px rgba(212, 101, 79, 0.2);
 }
 
 /* Mobile Overrides */

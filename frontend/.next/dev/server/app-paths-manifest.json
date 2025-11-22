@@ -1,13 +1,14 @@
 {
+  "/(auth)/sign-in/[[...sign-in]]/page": "app/(auth)/sign-in/[[...sign-in]]/page.js",
   "/(dashboard)/dashboard/page": "app/(dashboard)/dashboard/page.js",
+  "/(dashboard)/onboarding/page": "app/(dashboard)/onboarding/page.js",
   "/(dashboard)/settings/page": "app/(dashboard)/settings/page.js",
   "/_not-found/page": "app/_not-found/page.js",
   "/page": "app/page.js",
-  "/viewer/experiments/hybrid-flow/page": "app/viewer/experiments/hybrid-flow/page.js",
-  "/viewer/experiments/living-space/page": "app/viewer/experiments/living-space/page.js",
-  "/viewer/experiments/page": "app/viewer/experiments/page.js",
-  "/viewer/experiments/smart-stream/page": "app/viewer/experiments/smart-stream/page.js",
-  "/viewer/page": "app/viewer/page.js",
-  "/viewer/phase/[id]/page": "app/viewer/phase/[id]/page.js",
-  "/viewer/week/[number]/page": "app/viewer/week/[number]/page.js"
+  "/viewer/[roadmapId]/page": "app/viewer/[roadmapId]/page.js",
+  "/viewer/experiments/dashboard-command-center/page": "app/viewer/experiments/dashboard-command-center/page.js",
+  "/viewer/experiments/dashboard-elevated-grid/page": "app/viewer/experiments/dashboard-elevated-grid/page.js",
+  "/viewer/experiments/dashboard-hybrid/page": "app/viewer/experiments/dashboard-hybrid/page.js",
+  "/viewer/experiments/progressive/page": "app/viewer/experiments/progressive/page.js",
+  "/viewer/page": "app/viewer/page.js"
 }

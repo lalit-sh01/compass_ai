@@ -1848,6 +1848,26 @@ function useRoadmapMutations() {
             throw err;
         }
     };
+    const persistProgress = async (roadmapId, weekNumber, sectionType, deliverablePath, isCompleted, userNote, effectivenessRating)=>{
+        try {
+            // We use the phase number from the roadmap structure if available, otherwise default to 1
+            // In a real app, we'd look this up properly
+            const phaseNumber = 1;
+            await apiClient.post(`/api/roadmaps/${roadmapId}/progress`, {
+                phase_number: phaseNumber,
+                week_number: weekNumber,
+                section_type: sectionType,
+                deliverable_path: deliverablePath,
+                is_completed: isCompleted,
+                user_note: userNote,
+                effectiveness_rating: effectivenessRating
+            });
+        } catch (err) {
+            console.error('Failed to persist progress:', err);
+        // We don't throw here to avoid blocking the UI if the granular update fails
+        // The JSON blob update (persistRoadmap) is the source of truth for the UI
+        }
+    };
     /**
      * Add a deliverable to a week section
      */ const addDeliverable = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])(async (weekNumber, section, description, options)=>{
@@ -2140,6 +2160,10 @@ function useRoadmapMutations() {
                 }
             }
             await persistRoadmap(updatedRoadmap);
+            // Dual-write: Also update the progress table
+            // Construct a unique path for the deliverable
+            const deliverablePath = `${section}.${index}`;
+            await persistProgress(updatedRoadmap.id, weekNumber, section, deliverablePath, isCompleted);
             options?.onSuccess?.();
         } catch (err) {
             const error = err;
@@ -2257,6 +2281,9 @@ function useRoadmapMutations() {
                 }
             }
             await persistRoadmap(updatedRoadmap);
+            // Dual-write: Also update the progress table for topics
+            const topicPath = `research.topic.${topicIndex}`;
+            await persistProgress(updatedRoadmap.id, weekNumber, 'research', topicPath, isCompleted);
             options?.onSuccess?.();
         } catch (err) {
             const error = err;

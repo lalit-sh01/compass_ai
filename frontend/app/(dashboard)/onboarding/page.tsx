@@ -2,137 +2,182 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import AssessmentWizard from '@/components/onboarding/AssessmentWizard'
-import GapAnalysisReview from '@/components/onboarding/GapAnalysisReview'
-import RoadmapPreview from '@/components/onboarding/RoadmapPreview'
-import type { AssessmentData } from '@/lib/agents/assessment-agent'
-import type { GapAnalysisData } from '@/lib/agents/gap-analysis-agent'
-import type { Roadmap } from '@/lib/types'
+import { ProfilerInterview } from '@/components/streaming/ProfilerInterview'
+import { RoadmapGenerationStream } from '@/components/streaming/RoadmapGenerationStream'
+import type { Roadmap, UserContext } from '@/lib/types'
+import { useApiClient } from '@/lib/api-client'
 
-type OnboardingStep = 'assessment' | 'gap-analysis' | 'roadmap-preview'
+type OnboardingStep = 'profiler-interview' | 'roadmap-generation' | 'success'
 
 export default function OnboardingPage() {
   const router = useRouter()
-  const [currentStep, setCurrentStep] = useState<OnboardingStep>('assessment')
-  const [assessment, setAssessment] = useState<AssessmentData | null>(null)
-  const [gapAnalysis, setGapAnalysis] = useState<GapAnalysisData | null>(null)
-  const [selectedSkills, setSelectedSkills] = useState<string[]>([])
-  const [roadmap, setRoadmap] = useState<Roadmap | null>(null)
+  const apiClient = useApiClient()
+  const [currentStep, setCurrentStep] = useState<OnboardingStep>('profiler-interview')
+  const [generatedRoadmap, setGeneratedRoadmap] = useState<Roadmap | null>(null)
+  const [error, setError] = useState<string | null>(null)
+  const [userContext, setUserContext] = useState<UserContext | null>(null)
 
-  const handleAssessmentComplete = (data: AssessmentData) => {
-    setAssessment(data)
-    setCurrentStep('gap-analysis')
+  // Called when profiler interview completes
+  const handleProfilerComplete = async (profileData: UserContext) => {
+    console.log('Profiler complete, user context:', profileData)
+    setUserContext(profileData)
+    // Small delay to show the completion message
+    setTimeout(() => {
+      setCurrentStep('roadmap-generation')
+    }, 1000)
   }
 
-  const handleGapAnalysisComplete = (data: GapAnalysisData, skills: string[]) => {
-    setGapAnalysis(data)
-    setSelectedSkills(skills)
-    setCurrentStep('roadmap-preview')
+  const handleGenerationComplete = async (roadmap: Roadmap) => {
+    setGeneratedRoadmap(roadmap)
+    setCurrentStep('success')
+
+    // Save roadmap to database
+    try {
+      const response = await apiClient.post('/api/roadmaps', {
+        title: roadmap.roadmap_title || userContext?.specific_goal || 'Your Roadmap',
+        description: userContext?.specific_goal || '',
+        original_roadmap: roadmap,
+        current_roadmap: roadmap,
+      })
+      console.log('Roadmap saved:', response)
+    } catch (err) {
+      console.error('Failed to save roadmap:', err)
+      // Still allow user to view roadmap even if save fails
+    }
   }
 
-  const handleRoadmapSave = async (roadmap: Roadmap) => {
-    // Navigate to the newly created roadmap
-    // For now, just go to dashboard
+  const handleGenerationError = (err: string) => {
+    setError(err)
+    setCurrentStep('profiler-interview')
+  }
+
+  const handleViewRoadmap = () => {
+    if (generatedRoadmap) {
+      router.push('/viewer')
+    }
+  }
+
+  const handleBackToDashboard = () => {
     router.push('/dashboard')
   }
 
+  const handleProfilerError = (err: string) => {
+    setError(err)
+  }
+
   return (
-    <div className="min-h-screen bg-bg-primary py-8">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        {/* Progress Steps */}
-        <div className="mb-8">
-          <div className="flex items-center justify-center gap-4">
-            <Step
-              number={1}
-              label="Assessment"
-              active={currentStep === 'assessment'}
-              completed={currentStep !== 'assessment'}
-            />
-            <Connector completed={currentStep !== 'assessment'} />
-            <Step
-              number={2}
-              label="Gap Analysis"
-              active={currentStep === 'gap-analysis'}
-              completed={currentStep === 'roadmap-preview'}
-            />
-            <Connector completed={currentStep === 'roadmap-preview'} />
-            <Step
-              number={3}
-              label="Roadmap"
-              active={currentStep === 'roadmap-preview'}
-              completed={false}
-            />
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900 py-8">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="mb-8 text-center">
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+            Create Your Personalized Roadmap
+          </h1>
+          <p className="text-lg text-gray-600 dark:text-gray-400">
+            {currentStep === 'profiler-interview'
+              ? "Let's understand your goals and learning style"
+              : currentStep === 'roadmap-generation'
+                ? 'Generating your customized roadmap...'
+                : 'Your roadmap is ready!'}
+          </p>
         </div>
 
+        {/* Error Display */}
+        {error && (
+          <div className="mb-6 p-4 bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-200 rounded-lg">
+            {error}
+          </div>
+        )}
+
         {/* Step Content */}
-        {currentStep === 'assessment' && (
-          <AssessmentWizard onComplete={handleAssessmentComplete} />
+        {currentStep === 'profiler-interview' && (
+          <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden">
+            <ProfilerInterview
+              onComplete={handleProfilerComplete}
+              onError={handleProfilerError}
+            />
+          </div>
         )}
 
-        {currentStep === 'gap-analysis' && assessment && (
-          <GapAnalysisReview
-            assessment={assessment}
-            onComplete={handleGapAnalysisComplete}
-          />
+        {currentStep === 'roadmap-generation' && userContext && (
+          <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-8">
+            <RoadmapGenerationStream
+              userContext={userContext}
+              onComplete={handleGenerationComplete}
+              onError={handleGenerationError}
+            />
+          </div>
         )}
 
-        {currentStep === 'roadmap-preview' && assessment && gapAnalysis && (
-          <RoadmapPreview
-            assessment={assessment}
-            gapAnalysis={gapAnalysis}
-            selectedSkills={selectedSkills}
-            onSave={handleRoadmapSave}
-          />
+        {currentStep === 'success' && generatedRoadmap && (
+          <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-8">
+            <div className="text-center space-y-6">
+              <div className="text-6xl">✨</div>
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+                Your Roadmap is Ready!
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400">
+                We've created a personalized learning path tailored to your goals and learning style.
+              </p>
+              <p className="text-gray-600 dark:text-gray-400">
+                <span className="font-semibold">{generatedRoadmap.roadmap_title}</span>
+              </p>
+
+              {userContext && (
+                <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg text-left max-w-md mx-auto">
+                  <h3 className="font-semibold text-blue-900 dark:text-blue-200 mb-2">Your Profile:</h3>
+                  <ul className="text-sm text-blue-800 dark:text-blue-300 space-y-1">
+                    <li>
+                      <strong>Goal:</strong> {userContext.specific_goal}
+                    </li>
+                    {userContext.goal_domain && (
+                      <li>
+                        <strong>Domain:</strong> {userContext.goal_domain}
+                      </li>
+                    )}
+                    {userContext.learning_preferences && (
+                      <li>
+                        <strong>Learning Style:</strong> {userContext.learning_preferences}
+                      </li>
+                    )}
+                    {userContext.learning_style && !userContext.learning_preferences && (
+                      <li>
+                        <strong>Learning Style:</strong> {userContext.learning_style}
+                      </li>
+                    )}
+                    <li>
+                      <strong>Weekly Hours:</strong> {userContext.weekly_hours_cap}h
+                    </li>
+                    <li>
+                      <strong>Timeline:</strong> {userContext.deadline_months} months
+                    </li>
+                    {userContext.budget_constraint && (
+                      <li>
+                        <strong>Budget:</strong> {userContext.budget_constraint}
+                      </li>
+                    )}
+                  </ul>
+                </div>
+              )}
+
+              <div className="flex gap-4 pt-6 justify-center">
+                <button
+                  onClick={handleBackToDashboard}
+                  className="px-6 py-3 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors font-medium"
+                >
+                  Back to Dashboard
+                </button>
+                <button
+                  onClick={handleViewRoadmap}
+                  className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-colors font-medium"
+                >
+                  View Roadmap
+                </button>
+              </div>
+            </div>
+          </div>
         )}
       </div>
     </div>
-  )
-}
-
-function Step({
-  number,
-  label,
-  active,
-  completed,
-}: {
-  number: number
-  label: string
-  active: boolean
-  completed: boolean
-}) {
-  return (
-    <div className="flex flex-col items-center gap-2">
-      <div
-        className={`flex h-12 w-12 items-center justify-center rounded-full border-2 font-semibold transition-colors ${active
-            ? 'border-primary bg-primary text-on-primary'
-            : completed
-              ? 'border-green-600 bg-green-600 text-white'
-              : 'border-border bg-surface text-text-tertiary'
-          }`}
-      >
-        {completed ? (
-          <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-          </svg>
-        ) : (
-          number
-        )}
-      </div>
-      <span
-        className={`text-sm font-medium ${active ? 'text-primary' : completed ? 'text-green-600' : 'text-text-secondary'
-          }`}
-      >
-        {label}
-      </span>
-    </div>
-  )
-}
-
-function Connector({ completed }: { completed: boolean }) {
-  return (
-    <div
-      className={`h-0.5 w-24 transition-colors ${completed ? 'bg-green-600' : 'bg-border'}`}
-    />
   )
 }

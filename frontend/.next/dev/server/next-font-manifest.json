@@ -1,6 +1,12 @@
 {
   "app": {
+    "[project]/app/(auth)/sign-in/[[...sign-in]]/page": [
+      "static/media/797e433ab948586e-s.p.dbea232f.woff2"
+    ],
     "[project]/app/(dashboard)/dashboard/page": [
+      "static/media/797e433ab948586e-s.p.dbea232f.woff2"
+    ],
+    "[project]/app/(dashboard)/onboarding/page": [
       "static/media/797e433ab948586e-s.p.dbea232f.woff2"
     ],
     "[project]/app/(dashboard)/settings/page": [
@@ -12,25 +18,22 @@
     "[project]/app/page": [
       "static/media/797e433ab948586e-s.p.dbea232f.woff2"
     ],
-    "[project]/app/viewer/experiments/hybrid-flow/page": [
+    "[project]/app/viewer/[roadmapId]/page": [
       "static/media/797e433ab948586e-s.p.dbea232f.woff2"
     ],
-    "[project]/app/viewer/experiments/living-space/page": [
+    "[project]/app/viewer/experiments/dashboard-command-center/page": [
       "static/media/797e433ab948586e-s.p.dbea232f.woff2"
     ],
-    "[project]/app/viewer/experiments/page": [
+    "[project]/app/viewer/experiments/dashboard-elevated-grid/page": [
       "static/media/797e433ab948586e-s.p.dbea232f.woff2"
     ],
-    "[project]/app/viewer/experiments/smart-stream/page": [
+    "[project]/app/viewer/experiments/dashboard-hybrid/page": [
+      "static/media/797e433ab948586e-s.p.dbea232f.woff2"
+    ],
+    "[project]/app/viewer/experiments/progressive/page": [
       "static/media/797e433ab948586e-s.p.dbea232f.woff2"
     ],
     "[project]/app/viewer/page": [
-      "static/media/797e433ab948586e-s.p.dbea232f.woff2"
-    ],
-    "[project]/app/viewer/phase/[id]/page": [
-      "static/media/797e433ab948586e-s.p.dbea232f.woff2"
-    ],
-    "[project]/app/viewer/week/[number]/page": [
       "static/media/797e433ab948586e-s.p.dbea232f.woff2"
     ]
   },

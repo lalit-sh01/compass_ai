@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { Map, Home, Upload, List } from 'lucide-react';
 import { useRoadmap } from '@/context/RoadmapContext';
 import { DarkModeToggle } from '@/components/dark-mode-toggle';
+import { ThemeColorSwitcher } from '@/components/theme-color-switcher';
 import { UserMenu } from '@/components/user-menu';
 
 export default function Header() {
@@ -68,6 +69,7 @@ export default function Header() {
               </>
             )}
             <div className="ml-2 pl-2 border-l border-border flex items-center gap-2">
+              <ThemeColorSwitcher />
               <DarkModeToggle />
               <UserMenu />
             </div>

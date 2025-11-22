@@ -1,18 +1,20 @@
 'use client';
 
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
-import type { Roadmap, SearchFilters } from '@/lib/types';
+import type { Roadmap, LegacyRoadmap, SearchFilters } from '@/lib/types';
+import { isNewRoadmap, isLegacyRoadmap } from '@/lib/types';
 import { initializeValidator, validateRoadmapJSON, loadRoadmapFromURL } from '@/lib/validator';
 import { useApiClient } from '@/lib/api-client';
 
 interface RoadmapContextType {
-  roadmap: Roadmap | null;
+  roadmap: Roadmap | LegacyRoadmap | null;
   loading: boolean;
   error: string | null;
   validatorInitialized: boolean;
+  isNewFormat: boolean; // Helper to check format
   loadRoadmap: (source: string | File) => Promise<void>;
   loadRoadmapById: (roadmapId: string) => Promise<void>;
-  setRoadmapDirect: (roadmap: Roadmap) => void;
+  setRoadmapDirect: (roadmap: Roadmap | LegacyRoadmap) => void;
   clearRoadmap: () => void;
   filters: SearchFilters;
   setFilters: (filters: SearchFilters) => void;
@@ -21,11 +23,14 @@ interface RoadmapContextType {
 const RoadmapContext = createContext<RoadmapContextType | undefined>(undefined);
 
 export function RoadmapProvider({ children }: { children: ReactNode }) {
-  const [roadmap, setRoadmap] = useState<Roadmap | null>(null);
+  const [roadmap, setRoadmap] = useState<Roadmap | LegacyRoadmap | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [validatorInitialized, setValidatorInitialized] = useState(false);
   const [filters, setFilters] = useState<SearchFilters>({});
+
+  // Determine if roadmap is new format
+  const isNewFormat = roadmap ? isNewRoadmap(roadmap) : false;
 
   // Initialize validator on mount (optional - only needed for file uploads)
   // Commented out for now since we're using database-loaded roadmaps
@@ -93,7 +98,14 @@ export function RoadmapProvider({ children }: { children: ReactNode }) {
       // Backend returns the roadmap object directly, check structure
       // If backend returns { roadmap: ... }, use data.roadmap
       // Based on my implementation of GET /api/roadmaps/{roadmap_id}, it returns RoadmapResponse which has 'roadmap' field
-      setRoadmap(data.roadmap.current_roadmap || data.roadmap);
+      const roadmapData = data.roadmap.current_roadmap || data.roadmap;
+
+      // Inject the ID so we know which roadmap is loaded
+      if (roadmapData && !roadmapData.id) {
+        roadmapData.id = roadmapId;
+      }
+
+      setRoadmap(roadmapData);
     } catch (err) {
       setError((err as Error).message || 'Failed to load roadmap');
     } finally {
@@ -101,7 +113,7 @@ export function RoadmapProvider({ children }: { children: ReactNode }) {
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const setRoadmapDirect = useCallback((roadmap: Roadmap) => {
+  const setRoadmapDirect = useCallback((roadmap: Roadmap | LegacyRoadmap) => {
     setRoadmap(roadmap);
     setError(null);
   }, []);
@@ -117,6 +129,7 @@ export function RoadmapProvider({ children }: { children: ReactNode }) {
     loading,
     error,
     validatorInitialized,
+    isNewFormat,
     loadRoadmap,
     loadRoadmapById,
     setRoadmapDirect,

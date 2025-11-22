@@ -65,7 +65,7 @@ export default function RoadmapPreview({
       })
 
       // Navigate to the viewer with the roadmap ID
-      window.location.href = `/viewer?roadmapId=${data.id}`
+      window.location.href = `/viewer/${data.id}`
     } catch (err) {
       setError((err as Error).message)
     } finally {

@@ -101,6 +101,51 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../../app/viewer/[roadmapId]/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/viewer/[roadmapId]">> = Specific
+  const handler = {} as typeof import("../../../app/viewer/[roadmapId]/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/viewer/experiments/accordion/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/viewer/experiments/accordion">> = Specific
+  const handler = {} as typeof import("../../../app/viewer/experiments/accordion/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/viewer/experiments/dashboard-command-center/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/viewer/experiments/dashboard-command-center">> = Specific
+  const handler = {} as typeof import("../../../app/viewer/experiments/dashboard-command-center/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/viewer/experiments/dashboard-elevated-grid/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/viewer/experiments/dashboard-elevated-grid">> = Specific
+  const handler = {} as typeof import("../../../app/viewer/experiments/dashboard-elevated-grid/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/viewer/experiments/dashboard-hybrid/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/viewer/experiments/dashboard-hybrid">> = Specific
+  const handler = {} as typeof import("../../../app/viewer/experiments/dashboard-hybrid/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../app/viewer/experiments/hybrid-flow/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/viewer/experiments/hybrid-flow">> = Specific
@@ -119,6 +164,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../../app/viewer/experiments/morphing/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/viewer/experiments/morphing">> = Specific
+  const handler = {} as typeof import("../../../app/viewer/experiments/morphing/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../app/viewer/experiments/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/viewer/experiments">> = Specific
@@ -128,10 +182,163 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../../app/viewer/experiments/phase-canvas/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/viewer/experiments/phase-canvas">> = Specific
+  const handler = {} as typeof import("../../../app/viewer/experiments/phase-canvas/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/viewer/experiments/phase-focus-stream/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/viewer/experiments/phase-focus-stream">> = Specific
+  const handler = {} as typeof import("../../../app/viewer/experiments/phase-focus-stream/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/viewer/experiments/phase-hybrid/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/viewer/experiments/phase-hybrid">> = Specific
+  const handler = {} as typeof import("../../../app/viewer/experiments/phase-hybrid/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/viewer/experiments/phase-immersion/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/viewer/experiments/phase-immersion">> = Specific
+  const handler = {} as typeof import("../../../app/viewer/experiments/phase-immersion/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/viewer/experiments/phase-integrated-horizon/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/viewer/experiments/phase-integrated-horizon">> = Specific
+  const handler = {} as typeof import("../../../app/viewer/experiments/phase-integrated-horizon/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/viewer/experiments/phase-redesign-a/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/viewer/experiments/phase-redesign-a">> = Specific
+  const handler = {} as typeof import("../../../app/viewer/experiments/phase-redesign-a/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/viewer/experiments/phase-redesign-b/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/viewer/experiments/phase-redesign-b">> = Specific
+  const handler = {} as typeof import("../../../app/viewer/experiments/phase-redesign-b/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/viewer/experiments/phase-redesign/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/viewer/experiments/phase-redesign">> = Specific
+  const handler = {} as typeof import("../../../app/viewer/experiments/phase-redesign/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/viewer/experiments/phase-smart-stack/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/viewer/experiments/phase-smart-stack">> = Specific
+  const handler = {} as typeof import("../../../app/viewer/experiments/phase-smart-stack/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/viewer/experiments/phase-split-command/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/viewer/experiments/phase-split-command">> = Specific
+  const handler = {} as typeof import("../../../app/viewer/experiments/phase-split-command/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/viewer/experiments/progressive/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/viewer/experiments/progressive">> = Specific
+  const handler = {} as typeof import("../../../app/viewer/experiments/progressive/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/viewer/experiments/roadmap-accordion/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/viewer/experiments/roadmap-accordion">> = Specific
+  const handler = {} as typeof import("../../../app/viewer/experiments/roadmap-accordion/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/viewer/experiments/roadmap-carousel/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/viewer/experiments/roadmap-carousel">> = Specific
+  const handler = {} as typeof import("../../../app/viewer/experiments/roadmap-carousel/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/viewer/experiments/roadmap-redesign-final/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/viewer/experiments/roadmap-redesign-final">> = Specific
+  const handler = {} as typeof import("../../../app/viewer/experiments/roadmap-redesign-final/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/viewer/experiments/roadmap-timeline-stream/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/viewer/experiments/roadmap-timeline-stream">> = Specific
+  const handler = {} as typeof import("../../../app/viewer/experiments/roadmap-timeline-stream/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../app/viewer/experiments/smart-stream/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/viewer/experiments/smart-stream">> = Specific
   const handler = {} as typeof import("../../../app/viewer/experiments/smart-stream/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/viewer/experiments/unified-split/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/viewer/experiments/unified-split">> = Specific
+  const handler = {} as typeof import("../../../app/viewer/experiments/unified-split/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/viewer/experiments/vertical-stack/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/viewer/experiments/vertical-stack">> = Specific
+  const handler = {} as typeof import("../../../app/viewer/experiments/vertical-stack/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check

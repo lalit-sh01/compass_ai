@@ -178,6 +178,10 @@ const useApiClient = ()=>{
                 method: 'POST',
                 body: JSON.stringify(body)
             }),
+        put: (endpoint, body)=>fetchWithAuth(endpoint, {
+                method: 'PUT',
+                body: JSON.stringify(body)
+            }),
         patch: (endpoint, body)=>fetchWithAuth(endpoint, {
                 method: 'PATCH',
                 body: JSON.stringify(body)
@@ -284,7 +288,12 @@ function RoadmapProvider({ children }) {
                 // Backend returns the roadmap object directly, check structure
                 // If backend returns { roadmap: ... }, use data.roadmap
                 // Based on my implementation of GET /api/roadmaps/{roadmap_id}, it returns RoadmapResponse which has 'roadmap' field
-                setRoadmap(data.roadmap.current_roadmap || data.roadmap);
+                const roadmapData = data.roadmap.current_roadmap || data.roadmap;
+                // Inject the ID so we know which roadmap is loaded
+                if (roadmapData && !roadmapData.id) {
+                    roadmapData.id = roadmapId;
+                }
+                setRoadmap(roadmapData);
             } catch (err) {
                 setError(err.message || 'Failed to load roadmap');
             } finally{
@@ -322,7 +331,7 @@ function RoadmapProvider({ children }) {
         children: children
     }, void 0, false, {
         fileName: "[project]/context/RoadmapContext.tsx",
-        lineNumber: 128,
+        lineNumber: 137,
         columnNumber: 10
     }, this);
 }

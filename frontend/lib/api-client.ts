@@ -47,6 +47,7 @@ export const useApiClient = () => {
     return {
         get: (endpoint: string) => fetchWithAuth(endpoint, { method: 'GET' }),
         post: (endpoint: string, body: any) => fetchWithAuth(endpoint, { method: 'POST', body: JSON.stringify(body) }),
+        put: (endpoint: string, body: any) => fetchWithAuth(endpoint, { method: 'PUT', body: JSON.stringify(body) }),
         patch: (endpoint: string, body: any) => fetchWithAuth(endpoint, { method: 'PATCH', body: JSON.stringify(body) }),
         delete: (endpoint: string) => fetchWithAuth(endpoint, { method: 'DELETE' }),
     };

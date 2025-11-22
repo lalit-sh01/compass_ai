@@ -1,10 +1,27 @@
-import type { Roadmap, Week, Phase, Resource, SearchFilters } from './types';
+import type { Roadmap, Week, Phase, Resource, SearchFilters, LegacyRoadmap, Task } from './types';
+import { isNewRoadmap, isLegacyRoadmap } from './types';
 
 /**
- * Get all weeks from a roadmap
+ * Get all weeks from a roadmap (supports both old and new formats)
  */
-export function getAllWeeks(roadmap: Roadmap): Week[] {
-  return roadmap.phases.flatMap((phase) => phase.weeks);
+export function getAllWeeks(roadmap: Roadmap | LegacyRoadmap): (Week | import('./types').Week)[] {
+  // New format (PRD v4.1): phases[{phaseName: Week[]}]
+  if (isNewRoadmap(roadmap)) {
+    const weeks: Week[] = [];
+    for (const phaseDict of roadmap.phases) {
+      for (const phaseName in phaseDict) {
+        weeks.push(...phaseDict[phaseName]);
+      }
+    }
+    return weeks;
+  }
+
+  // Old format (Legacy): phases[].weeks[]
+  if (isLegacyRoadmap(roadmap)) {
+    return roadmap.phases.flatMap((phase) => phase.weeks);
+  }
+
+  return [];
 }
 
 /**
@@ -255,4 +272,162 @@ export function formatDate(dateString: string): string {
  */
 export function getWeeksByStatus(roadmap: Roadmap, status: string): Week[] {
   return getAllWeeks(roadmap).filter((week) => week.status === status);
+}
+
+// ============================================================================
+// NEW FORMAT (PRD v4.1) UTILITY FUNCTIONS
+// ============================================================================
+
+/**
+ * Get tasks by type from a new format week
+ */
+export function getTasksByType(week: Week, taskType: string): Task[] {
+  if (!week.tasks) return [];
+  return week.tasks.filter(t => t.task_type === taskType);
+}
+
+/**
+ * Get unique task types from a new format week
+ */
+export function getUniqueTaskTypes(week: Week): string[] {
+  if (!week.tasks) return [];
+  return [...new Set(week.tasks.map(t => t.task_type))];
+}
+
+/**
+ * Calculate task distribution for a new format week
+ * Returns percentage breakdown by task type
+ */
+export function calculateTaskDistribution(week: Week): Record<string, number> {
+  if (!week.tasks || week.tasks.length === 0) return {};
+
+  const distribution: Record<string, number> = {};
+  const totalMinutes = week.total_minutes || week.tasks.reduce((sum, t) => sum + t.estimated_minutes, 0);
+
+  for (const task of week.tasks) {
+    if (!distribution[task.task_type]) {
+      distribution[task.task_type] = 0;
+    }
+    distribution[task.task_type] += task.estimated_minutes;
+  }
+
+  // Convert to percentages
+  for (const type in distribution) {
+    distribution[type] = Math.round((distribution[type] / totalMinutes) * 100);
+  }
+
+  return distribution;
+}
+
+/**
+ * Get task category display name (label or formatted type)
+ */
+export function getTaskCategoryDisplay(task: Task): string {
+  if (task.task_category_label) {
+    return task.task_category_label;
+  }
+  // Format task_type: "watch-demo" → "Watch Demo"
+  return task.task_type
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}
+
+/**
+ * Count tasks with quality warnings
+ */
+export function countQualityWarnings(week: Week): number {
+  if (!week.tasks) return 0;
+  return week.tasks.filter(t => t.quality_warning === 'LOW_CONFIDENCE').length;
+}
+
+/**
+ * Get phase names from new format roadmap
+ */
+export function getPhaseNames(roadmap: Roadmap): string[] {
+  if (!isNewRoadmap(roadmap)) return [];
+
+  const names: string[] = [];
+  for (const phaseDict of roadmap.phases) {
+    names.push(...Object.keys(phaseDict));
+  }
+  return names;
+}
+
+/**
+ * Get phase for a specific week number (new format only)
+ */
+export function getPhaseForWeek(roadmap: Roadmap, weekNumber: number): { phaseName: string; weeks: Week[] } | null {
+  if (!isNewRoadmap(roadmap)) return null;
+
+  for (const phaseDict of roadmap.phases) {
+    for (const phaseName in phaseDict) {
+      const weeks = phaseDict[phaseName];
+      if (weeks.some(w => w.week_number === weekNumber)) {
+        return { phaseName, weeks };
+      }
+    }
+  }
+
+  return null;
+}
+
+/**
+ * Convert total minutes to hours display
+ */
+export function minutesToHoursDisplay(minutes: number): string {
+  const hours = Math.floor(minutes / 60);
+  const mins = minutes % 60;
+
+  if (mins === 0) {
+    return `${hours}h`;
+  }
+
+  return `${hours}h ${mins}m`;
+}
+
+/**
+ * Get roadmap title (works for both formats)
+ */
+export function getRoadmapTitle(roadmap: Roadmap | LegacyRoadmap): string {
+  if ('roadmap_title' in roadmap) {
+    return roadmap.roadmap_title;
+  }
+  if ('title' in roadmap) {
+    return roadmap.title;
+  }
+  return 'Untitled Roadmap';
+}
+
+/**
+ * Get total duration in weeks (works for both formats)
+ */
+export function getTotalDurationWeeks(roadmap: Roadmap | LegacyRoadmap): number {
+  if ('total_duration_weeks' in roadmap) {
+    return roadmap.total_duration_weeks;
+  }
+  if ('totalDurationWeeks' in roadmap) {
+    return roadmap.totalDurationWeeks;
+  }
+  return 0;
+}
+
+/**
+ * Get week progress for new format (count completed tasks)
+ */
+export function getNewFormatWeekProgress(week: Week): { completed: number; total: number; percentage: number } {
+  if (!week.tasks) {
+    return { completed: 0, total: 0, percentage: 0 };
+  }
+
+  // Note: Task completion tracking would require additional state management
+  // For now, return totals based on task count
+  const total = week.tasks.length;
+  const completed = 0; // Would need to be tracked separately
+
+  return {
+    completed,
+    total,
+    percentage: 0,
+  };
 }

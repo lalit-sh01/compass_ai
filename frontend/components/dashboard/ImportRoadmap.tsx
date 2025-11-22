@@ -74,7 +74,7 @@ export default function ImportRoadmap() {
 
       // Redirect to the viewer with the roadmap ID
       setTimeout(() => {
-        window.location.href = `/viewer?roadmapId=${result.id}`
+        window.location.href = `/viewer/${result.id}`
       }, 1500)
     } catch (err) {
       console.error('[ImportRoadmap] Error caught:', err);

@@ -341,9 +341,9 @@ function WeekCard({ week, compact = false }) {
         COMPLETED: 'bg-green-500/10 text-green-700 dark:text-green-400'
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "bg-surface rounded-md shadow-sm border border-border overflow-hidden hover:shadow-md transition-shadow",
+        className: "h-full flex flex-col bg-surface rounded-md shadow-sm border border-border overflow-hidden hover:shadow-md transition-shadow",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: compact ? 'p-[var(--space-4)]' : 'p-[var(--space-6)]',
+            className: `${compact ? 'p-[var(--space-4)]' : 'p-[var(--space-6)]'} flex-1 flex flex-col`,
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "flex items-start justify-between mb-3",
@@ -378,20 +378,27 @@ function WeekCard({ week, compact = false }) {
                                 lineNumber: 26,
                                 columnNumber: 13
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
-                                className: `font-bold text-text-primary mb-1 ${compact ? 'text-base' : 'text-lg'}`,
-                                children: week.title
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: compact ? 'min-h-[2.5rem]' : 'min-h-[3.5rem]',
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                    className: `font-bold text-text-primary mb-1 line-clamp-2 ${compact ? 'text-base' : 'text-lg'}`,
+                                    children: week.title
+                                }, void 0, false, {
+                                    fileName: "[project]/components/roadmap/WeekCard.tsx",
+                                    lineNumber: 33,
+                                    columnNumber: 15
+                                }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/roadmap/WeekCard.tsx",
                                 lineNumber: 32,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: `text-text-secondary italic ${compact ? 'text-xs' : 'text-sm'}`,
+                                className: `text-text-secondary italic line-clamp-2 ${compact ? 'text-xs' : 'text-sm'}`,
                                 children: week.theme
                             }, void 0, false, {
                                 fileName: "[project]/components/roadmap/WeekCard.tsx",
-                                lineNumber: 33,
+                                lineNumber: 35,
                                 columnNumber: 13
                             }, this)
                         ]
@@ -408,7 +415,7 @@ function WeekCard({ week, compact = false }) {
                 !compact && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "grid grid-cols-3 gap-2 mb-4 pt-3 border-t border-border",
+                            className: "grid grid-cols-3 gap-2 mb-4 pt-3 border-t border-border mt-auto",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "flex items-center gap-2 text-xs",
@@ -417,7 +424,7 @@ function WeekCard({ week, compact = false }) {
                                             className: "w-4 h-4 text-orange-600"
                                         }, void 0, false, {
                                             fileName: "[project]/components/roadmap/WeekCard.tsx",
-                                            lineNumber: 42,
+                                            lineNumber: 44,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -430,7 +437,7 @@ function WeekCard({ week, compact = false }) {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/roadmap/WeekCard.tsx",
-                                                    lineNumber: 44,
+                                                    lineNumber: 46,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -438,19 +445,19 @@ function WeekCard({ week, compact = false }) {
                                                     children: "Build"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/roadmap/WeekCard.tsx",
-                                                    lineNumber: 45,
+                                                    lineNumber: 47,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/roadmap/WeekCard.tsx",
-                                            lineNumber: 43,
+                                            lineNumber: 45,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/roadmap/WeekCard.tsx",
-                                    lineNumber: 41,
+                                    lineNumber: 43,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -460,7 +467,7 @@ function WeekCard({ week, compact = false }) {
                                             className: "w-4 h-4 text-blue-600"
                                         }, void 0, false, {
                                             fileName: "[project]/components/roadmap/WeekCard.tsx",
-                                            lineNumber: 49,
+                                            lineNumber: 51,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -473,7 +480,7 @@ function WeekCard({ week, compact = false }) {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/roadmap/WeekCard.tsx",
-                                                    lineNumber: 51,
+                                                    lineNumber: 53,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -481,19 +488,19 @@ function WeekCard({ week, compact = false }) {
                                                     children: "Research"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/roadmap/WeekCard.tsx",
-                                                    lineNumber: 52,
+                                                    lineNumber: 54,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/roadmap/WeekCard.tsx",
-                                            lineNumber: 50,
+                                            lineNumber: 52,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/roadmap/WeekCard.tsx",
-                                    lineNumber: 48,
+                                    lineNumber: 50,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -503,7 +510,7 @@ function WeekCard({ week, compact = false }) {
                                             className: "w-4 h-4 text-green-600"
                                         }, void 0, false, {
                                             fileName: "[project]/components/roadmap/WeekCard.tsx",
-                                            lineNumber: 56,
+                                            lineNumber: 58,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -516,7 +523,7 @@ function WeekCard({ week, compact = false }) {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/components/roadmap/WeekCard.tsx",
-                                                    lineNumber: 58,
+                                                    lineNumber: 60,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -524,25 +531,25 @@ function WeekCard({ week, compact = false }) {
                                                     children: "Share"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/roadmap/WeekCard.tsx",
-                                                    lineNumber: 59,
+                                                    lineNumber: 61,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/roadmap/WeekCard.tsx",
-                                            lineNumber: 57,
+                                            lineNumber: 59,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/roadmap/WeekCard.tsx",
-                                    lineNumber: 55,
+                                    lineNumber: 57,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/roadmap/WeekCard.tsx",
-                            lineNumber: 40,
+                            lineNumber: 42,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -554,12 +561,12 @@ function WeekCard({ week, compact = false }) {
                                 size: "sm"
                             }, void 0, false, {
                                 fileName: "[project]/components/roadmap/WeekCard.tsx",
-                                lineNumber: 66,
+                                lineNumber: 68,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/roadmap/WeekCard.tsx",
-                            lineNumber: 65,
+                            lineNumber: 67,
                             columnNumber: 13
                         }, this),
                         week.buildSection && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -570,27 +577,27 @@ function WeekCard({ week, compact = false }) {
                                     children: "PROJECT"
                                 }, void 0, false, {
                                     fileName: "[project]/components/roadmap/WeekCard.tsx",
-                                    lineNumber: 72,
+                                    lineNumber: 74,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "text-sm font-medium text-text-primary",
+                                    className: "text-sm font-medium text-text-primary line-clamp-1",
                                     children: week.buildSection.projectTitle
                                 }, void 0, false, {
                                     fileName: "[project]/components/roadmap/WeekCard.tsx",
-                                    lineNumber: 73,
+                                    lineNumber: 75,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/roadmap/WeekCard.tsx",
-                            lineNumber: 71,
+                            lineNumber: 73,
                             columnNumber: 15
                         }, this)
                     ]
                 }, void 0, true),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex items-center justify-between pt-3 border-t border-border",
+                    className: `flex items-center justify-between pt-3 border-t border-border ${compact ? 'mt-auto' : ''}`,
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                             className: "text-xs text-text-secondary flex items-center gap-1",
@@ -599,7 +606,7 @@ function WeekCard({ week, compact = false }) {
                                     className: "w-3.5 h-3.5"
                                 }, void 0, false, {
                                     fileName: "[project]/components/roadmap/WeekCard.tsx",
-                                    lineNumber: 81,
+                                    lineNumber: 83,
                                     columnNumber: 13
                                 }, this),
                                 week.totalHours,
@@ -607,7 +614,7 @@ function WeekCard({ week, compact = false }) {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/roadmap/WeekCard.tsx",
-                            lineNumber: 80,
+                            lineNumber: 82,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -619,19 +626,19 @@ function WeekCard({ week, compact = false }) {
                                     className: "w-4 h-4"
                                 }, void 0, false, {
                                     fileName: "[project]/components/roadmap/WeekCard.tsx",
-                                    lineNumber: 89,
+                                    lineNumber: 91,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/roadmap/WeekCard.tsx",
-                            lineNumber: 84,
+                            lineNumber: 86,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/roadmap/WeekCard.tsx",
-                    lineNumber: 79,
+                    lineNumber: 81,
                     columnNumber: 9
                 }, this)
             ]

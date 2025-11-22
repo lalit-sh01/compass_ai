@@ -5,8 +5,9 @@ app = FastAPI(title="Roadmap Viewer API")
 
 # Configure CORS - MUST be before router imports
 origins = [
-    "http://localhost:3000",  # Next.js frontend
-    "http://127.0.0.1:3000",  # Alternative localhost
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "*"  # Allow all for debugging
 ]
 
 app.add_middleware(

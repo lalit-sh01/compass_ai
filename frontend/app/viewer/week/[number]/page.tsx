@@ -8,7 +8,9 @@ import { useRoadmap } from '@/context/RoadmapContext';
 import BuildSectionComponent from '@/components/roadmap/BuildSection';
 import ResearchSectionComponent from '@/components/roadmap/ResearchSection';
 import ShareSectionComponent from '@/components/roadmap/ShareSection';
-import { getWeekByNumber, getWeekProgress } from '@/lib/roadmap-utils';
+import { getWeekByNumber, getWeekProgress, getTotalDurationWeeks } from '@/lib/roadmap-utils';
+import { NewFormatWeekView } from '@/components/viewer/NewFormatWeekView';
+import type { Week as NewWeek, Week as LegacyWeek } from '@/lib/types';
 
 import { HeroAction } from '@/components/viewer/hybrid/HeroAction';
 import { CopilotSidebar } from '@/components/viewer/hybrid/CopilotSidebar';
@@ -20,7 +22,7 @@ import { SelectionToggle } from '@/components/viewer/controls/SelectionToggle';
 
 export default function WeekPage({ params }: { params: Promise<{ number: string }> }) {
   const router = useRouter();
-  const { roadmap } = useRoadmap();
+  const { roadmap, isNewFormat } = useRoadmap();
   const resolvedParams = use(params);
   const weekNumber = parseInt(resolvedParams.number);
 
@@ -41,16 +43,23 @@ export default function WeekPage({ params }: { params: Promise<{ number: string 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-text-primary mb-4">Week not found</h1>
-          <Link href="/viewer" className="text-primary hover:underline">
-            Back to overview
+          <Link href="/dashboard" className="text-primary hover:underline">
+            Back to dashboard
           </Link>
         </div>
       </div>
     );
   }
 
+  // If new format (PRD v4.1), use NewFormatWeekView
+  if (isNewFormat) {
+    return <NewFormatWeekView week={week as NewWeek} weekNumber={weekNumber} />;
+  }
+
+  // Legacy format - continue with old rendering below
+  const legacyWeek = week as LegacyWeek;
   // Find the phase this week belongs to
-  const phase = roadmap.phases.find((p) => p.weeks.some((w) => w.weekNumber === weekNumber));
+  const phase = roadmap.phases.find((p: any) => p.weeks?.some((w: any) => w.weekNumber === weekNumber));
 
   return (
     <SelectionProvider>
@@ -77,8 +86,8 @@ export default function WeekPage({ params }: { params: Promise<{ number: string 
               {/* Hero Action */}
               <div className="mb-20">
                 <HeroAction
-                  title={week.title}
-                  subtitle={week.theme}
+                  title={legacyWeek.title}
+                  subtitle={legacyWeek.theme}
                   type="build"
                   onAction={() => { }}
                 />
@@ -86,7 +95,7 @@ export default function WeekPage({ params }: { params: Promise<{ number: string 
 
               <div className="space-y-16">
                 {/* 1. Build Section */}
-                {week.buildSection && (
+                {legacyWeek.buildSection && (
                   <ScrollFocusWrapper
                     className="relative transition-all duration-500"
                     defaultInFocus={true}
@@ -99,11 +108,11 @@ export default function WeekPage({ params }: { params: Promise<{ number: string 
                         <span className="px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 text-xs font-bold uppercase tracking-wider">
                           Build Phase
                         </span>
-                        <span className="text-sm text-gray-500">{week.buildSection.hours}h estimated</span>
+                        <span className="text-sm text-gray-500">{legacyWeek.buildSection.hours}h estimated</span>
                       </div>
 
                       <BuildSectionComponent
-                        buildSection={week.buildSection}
+                        buildSection={legacyWeek.buildSection}
                         weekNumber={weekNumber}
                       />
                     </div>
@@ -111,7 +120,7 @@ export default function WeekPage({ params }: { params: Promise<{ number: string 
                 )}
 
                 {/* 2. Research Section */}
-                {week.researchSection && (
+                {legacyWeek.researchSection && (
                   <ScrollFocusWrapper
                     className="relative transition-all duration-500"
                     threshold={0.1}
@@ -122,11 +131,11 @@ export default function WeekPage({ params }: { params: Promise<{ number: string 
                         <span className="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-bold uppercase tracking-wider">
                           Research Phase
                         </span>
-                        <span className="text-sm text-gray-500">{week.researchSection.hours}h estimated</span>
+                        <span className="text-sm text-gray-500">{legacyWeek.researchSection.hours}h estimated</span>
                       </div>
 
                       <ResearchSectionComponent
-                        researchSection={week.researchSection}
+                        researchSection={legacyWeek.researchSection}
                         weekNumber={weekNumber}
                       />
                     </div>
@@ -134,7 +143,7 @@ export default function WeekPage({ params }: { params: Promise<{ number: string 
                 )}
 
                 {/* 3. Share Section */}
-                {week.shareSection && (
+                {legacyWeek.shareSection && (
                   <ScrollFocusWrapper
                     className="relative transition-all duration-500"
                     threshold={0.1}
@@ -145,11 +154,11 @@ export default function WeekPage({ params }: { params: Promise<{ number: string 
                         <span className="px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-xs font-bold uppercase tracking-wider">
                           Share Phase
                         </span>
-                        <span className="text-sm text-gray-500">{week.shareSection.hours}h estimated</span>
+                        <span className="text-sm text-gray-500">{legacyWeek.shareSection.hours}h estimated</span>
                       </div>
 
                       <ShareSectionComponent
-                        shareSection={week.shareSection}
+                        shareSection={legacyWeek.shareSection}
                         weekNumber={weekNumber}
                       />
                     </div>
@@ -168,7 +177,7 @@ export default function WeekPage({ params }: { params: Promise<{ number: string 
                     </Link>
                   )}
                   <div className="flex-1" />
-                  {weekNumber < roadmap.totalDurationWeeks && (
+                  {weekNumber < getTotalDurationWeeks(roadmap) && (
                     <Link
                       href={`/viewer/week/${weekNumber + 1}`}
                       className="flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20"

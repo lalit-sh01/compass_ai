@@ -78,7 +78,7 @@ function ImportRoadmap() {
             setSuccess(true);
             // Redirect to the viewer with the roadmap ID
             setTimeout(()=>{
-                window.location.href = `/viewer?roadmapId=${result.id}`;
+                window.location.href = `/viewer/${result.id}`;
             }, 1500);
         } catch (err) {
             console.error('[ImportRoadmap] Error caught:', err);
@@ -537,83 +537,131 @@ function RoadmapCard({ roadmap, onDelete }) {
         }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-        href: `/viewer?roadmapId=${roadmap.id}`,
-        className: "group block bg-surface rounded-md border border-border hover:border-primary hover:shadow-md transition-all p-[var(--space-6)]",
+        href: `/viewer/${roadmap.id}`,
+        className: "group flex flex-col h-full bg-surface rounded-md border border-border hover:border-primary hover:shadow-md transition-all p-[var(--space-6)]",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex items-start justify-between mb-3",
+                className: "flex-1 flex flex-col",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex-1",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                            className: "text-lg font-semibold text-text-primary group-hover:text-primary transition-colors line-clamp-2",
-                            children: roadmap.title
-                        }, void 0, false, {
-                            fileName: "[project]/components/dashboard/RoadmapCard.tsx",
-                            lineNumber: 51,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/components/dashboard/RoadmapCard.tsx",
-                        lineNumber: 50,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: `flex-shrink-0 ml-3 px-2 py-1 rounded-full text-xs font-medium ${statusColors[roadmap.status]}`,
-                        children: statusLabels[roadmap.status]
-                    }, void 0, false, {
-                        fileName: "[project]/components/dashboard/RoadmapCard.tsx",
-                        lineNumber: 55,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/components/dashboard/RoadmapCard.tsx",
-                lineNumber: 49,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "text-sm text-text-secondary line-clamp-2 mb-4",
-                children: roadmap.goal
-            }, void 0, false, {
-                fileName: "[project]/components/dashboard/RoadmapCard.tsx",
-                lineNumber: 64,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex items-center gap-4 text-xs text-text-tertiary mb-4",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex items-center gap-1",
+                        className: "flex items-start justify-between mb-3",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                className: "h-4 w-4",
-                                fill: "none",
-                                viewBox: "0 0 24 24",
-                                stroke: "currentColor",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                    strokeLinecap: "round",
-                                    strokeLinejoin: "round",
-                                    strokeWidth: 2,
-                                    d: "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex-1 min-h-[3.5rem]",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                    className: "text-lg font-semibold text-text-primary group-hover:text-primary transition-colors line-clamp-2",
+                                    children: roadmap.title
                                 }, void 0, false, {
                                     fileName: "[project]/components/dashboard/RoadmapCard.tsx",
-                                    lineNumber: 70,
+                                    lineNumber: 52,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/dashboard/RoadmapCard.tsx",
-                                lineNumber: 69,
+                                lineNumber: 51,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: `flex-shrink-0 ml-3 px-2 py-1 rounded-full text-xs font-medium ${statusColors[roadmap.status]}`,
+                                children: statusLabels[roadmap.status]
+                            }, void 0, false, {
+                                fileName: "[project]/components/dashboard/RoadmapCard.tsx",
+                                lineNumber: 56,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/dashboard/RoadmapCard.tsx",
+                        lineNumber: 50,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "text-sm text-text-secondary line-clamp-2 mb-4",
+                        children: roadmap.goal
+                    }, void 0, false, {
+                        fileName: "[project]/components/dashboard/RoadmapCard.tsx",
+                        lineNumber: 65,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mt-auto flex items-center gap-4 text-xs text-text-tertiary mb-4",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex items-center gap-1",
                                 children: [
-                                    roadmap.total_duration_weeks,
-                                    " weeks"
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                        className: "h-4 w-4",
+                                        fill: "none",
+                                        viewBox: "0 0 24 24",
+                                        stroke: "currentColor",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                            strokeLinecap: "round",
+                                            strokeLinejoin: "round",
+                                            strokeWidth: 2,
+                                            d: "M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/dashboard/RoadmapCard.tsx",
+                                            lineNumber: 71,
+                                            columnNumber: 15
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/dashboard/RoadmapCard.tsx",
+                                        lineNumber: 70,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        children: [
+                                            roadmap.total_duration_weeks,
+                                            " weeks"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/dashboard/RoadmapCard.tsx",
+                                        lineNumber: 78,
+                                        columnNumber: 13
+                                    }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/dashboard/RoadmapCard.tsx",
-                                lineNumber: 77,
+                                lineNumber: 69,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex items-center gap-1",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                        className: "h-4 w-4",
+                                        fill: "none",
+                                        viewBox: "0 0 24 24",
+                                        stroke: "currentColor",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                            strokeLinecap: "round",
+                                            strokeLinejoin: "round",
+                                            strokeWidth: 2,
+                                            d: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/dashboard/RoadmapCard.tsx",
+                                            lineNumber: 82,
+                                            columnNumber: 15
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/dashboard/RoadmapCard.tsx",
+                                        lineNumber: 81,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        children: [
+                                            "Created ",
+                                            createdDate
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/dashboard/RoadmapCard.tsx",
+                                        lineNumber: 89,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/dashboard/RoadmapCard.tsx",
+                                lineNumber: 80,
                                 columnNumber: 11
                             }, this)
                         ]
@@ -622,77 +670,38 @@ function RoadmapCard({ roadmap, onDelete }) {
                         lineNumber: 68,
                         columnNumber: 9
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex items-center gap-1",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                className: "h-4 w-4",
-                                fill: "none",
-                                viewBox: "0 0 24 24",
-                                stroke: "currentColor",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                    strokeLinecap: "round",
-                                    strokeLinejoin: "round",
-                                    strokeWidth: 2,
-                                    d: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                                }, void 0, false, {
-                                    fileName: "[project]/components/dashboard/RoadmapCard.tsx",
-                                    lineNumber: 81,
-                                    columnNumber: 13
-                                }, this)
+                    roadmap.status === 'in_progress' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mb-4",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "h-2 bg-bg-secondary rounded-full overflow-hidden",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "h-full bg-primary transition-all",
+                                style: {
+                                    width: '0%'
+                                }
                             }, void 0, false, {
                                 fileName: "[project]/components/dashboard/RoadmapCard.tsx",
-                                lineNumber: 80,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                children: [
-                                    "Created ",
-                                    createdDate
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/components/dashboard/RoadmapCard.tsx",
-                                lineNumber: 88,
-                                columnNumber: 11
+                                lineNumber: 97,
+                                columnNumber: 15
                             }, this)
-                        ]
-                    }, void 0, true, {
+                        }, void 0, false, {
+                            fileName: "[project]/components/dashboard/RoadmapCard.tsx",
+                            lineNumber: 96,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
                         fileName: "[project]/components/dashboard/RoadmapCard.tsx",
-                        lineNumber: 79,
-                        columnNumber: 9
+                        lineNumber: 95,
+                        columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/dashboard/RoadmapCard.tsx",
-                lineNumber: 67,
+                lineNumber: 48,
                 columnNumber: 7
             }, this),
-            roadmap.status === 'in_progress' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "mb-4",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "h-2 bg-bg-secondary rounded-full overflow-hidden",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "h-full bg-primary transition-all",
-                        style: {
-                            width: '0%'
-                        }
-                    }, void 0, false, {
-                        fileName: "[project]/components/dashboard/RoadmapCard.tsx",
-                        lineNumber: 96,
-                        columnNumber: 13
-                    }, this)
-                }, void 0, false, {
-                    fileName: "[project]/components/dashboard/RoadmapCard.tsx",
-                    lineNumber: 95,
-                    columnNumber: 11
-                }, this)
-            }, void 0, false, {
-                fileName: "[project]/components/dashboard/RoadmapCard.tsx",
-                lineNumber: 94,
-                columnNumber: 9
-            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex items-center justify-between pt-4 border-t border-border",
+                className: "flex items-center justify-between pt-4 border-t border-border mt-auto",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: handleDelete,
@@ -700,7 +709,7 @@ function RoadmapCard({ roadmap, onDelete }) {
                         children: "Delete"
                     }, void 0, false, {
                         fileName: "[project]/components/dashboard/RoadmapCard.tsx",
-                        lineNumber: 106,
+                        lineNumber: 108,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -708,13 +717,13 @@ function RoadmapCard({ roadmap, onDelete }) {
                         children: "View Roadmap →"
                     }, void 0, false, {
                         fileName: "[project]/components/dashboard/RoadmapCard.tsx",
-                        lineNumber: 112,
+                        lineNumber: 114,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/dashboard/RoadmapCard.tsx",
-                lineNumber: 105,
+                lineNumber: 107,
                 columnNumber: 7
             }, this)
         ]

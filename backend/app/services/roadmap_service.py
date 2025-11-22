@@ -7,6 +7,7 @@ from sqlmodel import select
 
 from app.models.assessment import Assessment
 from app.models.roadmap import Roadmap, RoadmapCreate, RoadmapImport, RoadmapUpdate
+from app.models.roadmap_progress import RoadmapProgress
 
 
 class RoadmapService:
@@ -163,11 +164,208 @@ class RoadmapService:
         }
 
     async def delete_roadmap(self, roadmap_id: UUID, user_id: UUID) -> bool:
+        try:
+            roadmap = await self.get_roadmap_by_id(roadmap_id, user_id)
+            if not roadmap:
+                return False
+
+            # Manually delete related records first to ensure deletion works
+            # even if ON DELETE CASCADE is missing in the DB
+            from sqlalchemy import delete
+            from app.models.roadmap_progress import RoadmapProgress
+            from app.models.assessment import Assessment
+            
+            # Delete progress
+            await self.session.execute(
+                delete(RoadmapProgress).where(RoadmapProgress.roadmap_id == roadmap_id)
+            )
+
+            # Delete assessments
+            await self.session.execute(
+                delete(Assessment).where(Assessment.roadmap_id == roadmap_id)
+            )
+                
+            await self.session.delete(roadmap)
+            await self.session.commit()
+            return True
+        except Exception as e:
+            import logging
+            logging.error(f"Error deleting roadmap {roadmap_id}: {str(e)}")
+            await self.session.rollback()
+            raise e
+
+    async def update_progress(
+        self, 
+        roadmap_id: UUID, 
+        user_id: UUID, 
+        phase_number: int,
+        week_number: int,
+        section_type: str,
+        deliverable_path: str,
+        is_completed: bool,
+        user_note: Optional[str] = None,
+        effectiveness_rating: Optional[int] = None,
+        total_time_spent_seconds: Optional[int] = None
+    ) -> Optional[RoadmapProgress]:
+        # First verify roadmap ownership
         roadmap = await self.get_roadmap_by_id(roadmap_id, user_id)
         if not roadmap:
-            return False
+            return None
+
+        # Check if progress record exists
+        statement = select(RoadmapProgress).where(
+            RoadmapProgress.roadmap_id == roadmap_id,
+            RoadmapProgress.deliverable_path == deliverable_path
+        )
+        result = await self.session.execute(statement)
+        progress = result.scalars().first()
+
+        if progress:
+            # Update existing
+            progress.is_completed = is_completed
             
-        await self.session.delete(roadmap)
+            # If completing and session was active, add elapsed time
+            session_was_active = False
+            if is_completed and progress.last_session_started_at:
+                now = datetime.utcnow()
+                elapsed = (now - progress.last_session_started_at).total_seconds()
+                progress.total_time_spent_seconds += int(elapsed)
+                progress.last_session_started_at = None
+                session_was_active = True
+            
+            if is_completed and not progress.completed_at:
+                progress.completed_at = datetime.utcnow()
+            elif not is_completed:
+                progress.completed_at = None
+                
+            if user_note is not None:
+                progress.user_note = user_note
+            if effectiveness_rating is not None:
+                progress.effectiveness_rating = effectiveness_rating
+            if total_time_spent_seconds is not None and not session_was_active:
+                # Only update if explicitly provided and we didn't just calculate it from session
+                progress.total_time_spent_seconds = total_time_spent_seconds
+                progress.last_session_started_at = None # Clear session if setting total time
+                
+            progress.updated_at = datetime.utcnow()
+        else:
+            # Create new
+            progress = RoadmapProgress(
+                roadmap_id=roadmap_id,
+                phase_number=phase_number,
+                week_number=week_number,
+                section_type=section_type,
+                deliverable_path=deliverable_path,
+                is_completed=is_completed,
+                completed_at=datetime.utcnow() if is_completed else None,
+                user_note=user_note,
+                effectiveness_rating=effectiveness_rating,
+                total_time_spent_seconds=total_time_spent_seconds if total_time_spent_seconds is not None else 0
+            )
+            self.session.add(progress)
+
         await self.session.commit()
-        return True
+        await self.session.refresh(progress)
+        return progress
+
+    async def start_task(
+        self,
+        roadmap_id: UUID,
+        user_id: UUID,
+        phase_number: int,
+        week_number: int,
+        section_type: str,
+        deliverable_path: str
+    ) -> Optional[RoadmapProgress]:
+        # Verify roadmap ownership
+        roadmap = await self.get_roadmap_by_id(roadmap_id, user_id)
+        if not roadmap:
+            return None
+
+        # Find or create progress record
+        statement = select(RoadmapProgress).where(
+            RoadmapProgress.roadmap_id == roadmap_id,
+            RoadmapProgress.deliverable_path == deliverable_path
+        )
+        result = await self.session.execute(statement)
+        progress = result.scalars().first()
+
+        if not progress:
+            progress = RoadmapProgress(
+                roadmap_id=roadmap_id,
+                phase_number=phase_number,
+                week_number=week_number,
+                section_type=section_type,
+                deliverable_path=deliverable_path,
+                total_time_spent_seconds=0
+            )
+            self.session.add(progress)
+        
+        # Start session
+        progress.last_session_started_at = datetime.utcnow()
+        progress.updated_at = datetime.utcnow()
+        
+        await self.session.commit()
+        await self.session.refresh(progress)
+        return progress
+
+    async def pause_task(
+        self,
+        roadmap_id: UUID,
+        user_id: UUID,
+        deliverable_path: str
+    ) -> Optional[RoadmapProgress]:
+        # Verify roadmap ownership
+        roadmap = await self.get_roadmap_by_id(roadmap_id, user_id)
+        if not roadmap:
+            return None
+
+        statement = select(RoadmapProgress).where(
+            RoadmapProgress.roadmap_id == roadmap_id,
+            RoadmapProgress.deliverable_path == deliverable_path
+        )
+        result = await self.session.execute(statement)
+        progress = result.scalars().first()
+
+        if not progress or not progress.last_session_started_at:
+            return progress
+
+        # Calculate elapsed time
+        now = datetime.utcnow()
+        elapsed = (now - progress.last_session_started_at).total_seconds()
+        progress.total_time_spent_seconds += int(elapsed)
+        progress.last_session_started_at = None
+        progress.updated_at = now
+        
+        await self.session.commit()
+        await self.session.refresh(progress)
+        return progress
+
+    async def resume_task(
+        self,
+        roadmap_id: UUID,
+        user_id: UUID,
+        deliverable_path: str
+    ) -> Optional[RoadmapProgress]:
+        # Verify roadmap ownership
+        roadmap = await self.get_roadmap_by_id(roadmap_id, user_id)
+        if not roadmap:
+            return None
+
+        statement = select(RoadmapProgress).where(
+            RoadmapProgress.roadmap_id == roadmap_id,
+            RoadmapProgress.deliverable_path == deliverable_path
+        )
+        result = await self.session.execute(statement)
+        progress = result.scalars().first()
+
+        if not progress:
+            return None # Should exist if resuming
+
+        progress.last_session_started_at = datetime.utcnow()
+        progress.updated_at = datetime.utcnow()
+        
+        await self.session.commit()
+        await self.session.refresh(progress)
+        return progress
 

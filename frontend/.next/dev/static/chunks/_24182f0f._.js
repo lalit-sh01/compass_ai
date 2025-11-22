@@ -342,9 +342,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$roadmap$2d$utils$2e$t
 function PhaseCard({ phase }) {
     const progress = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$roadmap$2d$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getPhaseProgress"])(phase);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "bg-surface rounded-md shadow-sm border border-border overflow-hidden hover:shadow-md transition-shadow",
+        className: "h-full flex flex-col bg-surface rounded-md shadow-sm border border-border overflow-hidden hover:shadow-md transition-shadow",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "p-[var(--space-6)]",
+            className: "flex-1 flex flex-col p-[var(--space-6)]",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "flex items-start justify-between mb-4",
@@ -388,20 +388,27 @@ function PhaseCard({ phase }) {
                                 lineNumber: 19,
                                 columnNumber: 13
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                className: "text-xl font-bold text-text-primary mb-2",
-                                children: phase.title
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "min-h-[3.5rem]",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                    className: "text-xl font-bold text-text-primary mb-2 line-clamp-2",
+                                    children: phase.title
+                                }, void 0, false, {
+                                    fileName: "[project]/components/roadmap/PhaseCard.tsx",
+                                    lineNumber: 29,
+                                    columnNumber: 15
+                                }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/roadmap/PhaseCard.tsx",
                                 lineNumber: 28,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-sm text-text-secondary leading-relaxed",
+                                className: "text-sm text-text-secondary leading-relaxed line-clamp-3",
                                 children: phase.summary
                             }, void 0, false, {
                                 fileName: "[project]/components/roadmap/PhaseCard.tsx",
-                                lineNumber: 29,
+                                lineNumber: 31,
                                 columnNumber: 13
                             }, this)
                         ]
@@ -416,7 +423,7 @@ function PhaseCard({ phase }) {
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "mb-4",
+                    className: "mb-4 mt-auto",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$ProgressBar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         completed: progress.completed,
                         total: progress.total,
@@ -424,12 +431,12 @@ function PhaseCard({ phase }) {
                         size: "md"
                     }, void 0, false, {
                         fileName: "[project]/components/roadmap/PhaseCard.tsx",
-                        lineNumber: 34,
+                        lineNumber: 36,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/roadmap/PhaseCard.tsx",
-                    lineNumber: 33,
+                    lineNumber: 35,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -443,7 +450,7 @@ function PhaseCard({ phase }) {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/roadmap/PhaseCard.tsx",
-                            lineNumber: 38,
+                            lineNumber: 40,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -455,19 +462,19 @@ function PhaseCard({ phase }) {
                                     className: "w-4 h-4"
                                 }, void 0, false, {
                                     fileName: "[project]/components/roadmap/PhaseCard.tsx",
-                                    lineNumber: 44,
+                                    lineNumber: 46,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/roadmap/PhaseCard.tsx",
-                            lineNumber: 39,
+                            lineNumber: 41,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/roadmap/PhaseCard.tsx",
-                    lineNumber: 37,
+                    lineNumber: 39,
                     columnNumber: 9
                 }, this)
             ]
@@ -523,7 +530,8 @@ function ViewerContent() {
     const roadmapId = searchParams.get('roadmapId');
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "ViewerContent.useEffect": ()=>{
-            if (roadmapId && !roadmap && !loading) {
+            // If we have a roadmapId, and either no roadmap is loaded OR the loaded roadmap has a different ID
+            if (roadmapId && (!roadmap || roadmap.id !== roadmapId) && !loading) {
                 // Load from database
                 loadRoadmapById(roadmapId);
             } else if (!roadmapId && !roadmap) {
@@ -532,7 +540,8 @@ function ViewerContent() {
             }
         }
     }["ViewerContent.useEffect"], [
-        roadmapId
+        roadmapId,
+        roadmap?.id
     ]); // eslint-disable-line react-hooks/exhaustive-deps
     if (loading) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -556,7 +565,7 @@ function ViewerContent() {
                                     fill: "none"
                                 }, void 0, false, {
                                     fileName: "[project]/app/viewer/page.tsx",
-                                    lineNumber: 34,
+                                    lineNumber: 35,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -565,13 +574,13 @@ function ViewerContent() {
                                     d: "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                                 }, void 0, false, {
                                     fileName: "[project]/app/viewer/page.tsx",
-                                    lineNumber: 35,
+                                    lineNumber: 36,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/viewer/page.tsx",
-                            lineNumber: 33,
+                            lineNumber: 34,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -579,23 +588,23 @@ function ViewerContent() {
                             children: "Loading roadmap..."
                         }, void 0, false, {
                             fileName: "[project]/app/viewer/page.tsx",
-                            lineNumber: 37,
+                            lineNumber: 38,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/viewer/page.tsx",
-                    lineNumber: 32,
+                    lineNumber: 33,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/viewer/page.tsx",
-                lineNumber: 31,
+                lineNumber: 32,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/app/viewer/page.tsx",
-            lineNumber: 30,
+            lineNumber: 31,
             columnNumber: 7
         }, this);
     }
@@ -620,7 +629,7 @@ function ViewerContent() {
                                         children: roadmap.title
                                     }, void 0, false, {
                                         fileName: "[project]/app/viewer/page.tsx",
-                                        lineNumber: 56,
+                                        lineNumber: 57,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -630,26 +639,26 @@ function ViewerContent() {
                                                 className: "w-4 h-4 text-primary flex-shrink-0"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/viewer/page.tsx",
-                                                lineNumber: 58,
+                                                lineNumber: 59,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 children: roadmap.goal
                                             }, void 0, false, {
                                                 fileName: "[project]/app/viewer/page.tsx",
-                                                lineNumber: 59,
+                                                lineNumber: 60,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/viewer/page.tsx",
-                                        lineNumber: 57,
+                                        lineNumber: 58,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/viewer/page.tsx",
-                                lineNumber: 55,
+                                lineNumber: 56,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -666,7 +675,7 @@ function ViewerContent() {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/viewer/page.tsx",
-                                                lineNumber: 64,
+                                                lineNumber: 65,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -674,13 +683,13 @@ function ViewerContent() {
                                                 children: "Duration"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/viewer/page.tsx",
-                                                lineNumber: 65,
+                                                lineNumber: 66,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/viewer/page.tsx",
-                                        lineNumber: 63,
+                                        lineNumber: 64,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -691,7 +700,7 @@ function ViewerContent() {
                                                 children: roadmap.timeCommitmentPerWeek
                                             }, void 0, false, {
                                                 fileName: "[project]/app/viewer/page.tsx",
-                                                lineNumber: 68,
+                                                lineNumber: 69,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -699,25 +708,25 @@ function ViewerContent() {
                                                 children: "Per week"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/viewer/page.tsx",
-                                                lineNumber: 69,
+                                                lineNumber: 70,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/viewer/page.tsx",
-                                        lineNumber: 67,
+                                        lineNumber: 68,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/viewer/page.tsx",
-                                lineNumber: 62,
+                                lineNumber: 63,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/viewer/page.tsx",
-                        lineNumber: 54,
+                        lineNumber: 55,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -731,7 +740,7 @@ function ViewerContent() {
                                         children: "Overall Progress"
                                     }, void 0, false, {
                                         fileName: "[project]/app/viewer/page.tsx",
-                                        lineNumber: 77,
+                                        lineNumber: 78,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -744,13 +753,13 @@ function ViewerContent() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/viewer/page.tsx",
-                                        lineNumber: 78,
+                                        lineNumber: 79,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/viewer/page.tsx",
-                                lineNumber: 76,
+                                lineNumber: 77,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$ProgressBar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -760,19 +769,19 @@ function ViewerContent() {
                                 size: "lg"
                             }, void 0, false, {
                                 fileName: "[project]/app/viewer/page.tsx",
-                                lineNumber: 80,
+                                lineNumber: 81,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/viewer/page.tsx",
-                        lineNumber: 75,
+                        lineNumber: 76,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/viewer/page.tsx",
-                lineNumber: 53,
+                lineNumber: 54,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -783,7 +792,7 @@ function ViewerContent() {
                         children: "Learning Phases"
                     }, void 0, false, {
                         fileName: "[project]/app/viewer/page.tsx",
-                        lineNumber: 86,
+                        lineNumber: 87,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -792,18 +801,18 @@ function ViewerContent() {
                                 phase: phase
                             }, phase.phaseNumber, false, {
                                 fileName: "[project]/app/viewer/page.tsx",
-                                lineNumber: 89,
+                                lineNumber: 90,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/app/viewer/page.tsx",
-                        lineNumber: 87,
+                        lineNumber: 88,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/viewer/page.tsx",
-                lineNumber: 85,
+                lineNumber: 86,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("details", {
@@ -819,7 +828,7 @@ function ViewerContent() {
                                     children: "Core Skills & Details"
                                 }, void 0, false, {
                                     fileName: "[project]/app/viewer/page.tsx",
-                                    lineNumber: 98,
+                                    lineNumber: 99,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -834,23 +843,23 @@ function ViewerContent() {
                                         d: "M19 9l-7 7-7-7"
                                     }, void 0, false, {
                                         fileName: "[project]/app/viewer/page.tsx",
-                                        lineNumber: 100,
+                                        lineNumber: 101,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/viewer/page.tsx",
-                                    lineNumber: 99,
+                                    lineNumber: 100,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/viewer/page.tsx",
-                            lineNumber: 97,
+                            lineNumber: 98,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/viewer/page.tsx",
-                        lineNumber: 96,
+                        lineNumber: 97,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -864,7 +873,7 @@ function ViewerContent() {
                                         children: "Core Skills"
                                     }, void 0, false, {
                                         fileName: "[project]/app/viewer/page.tsx",
-                                        lineNumber: 107,
+                                        lineNumber: 108,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -880,7 +889,7 @@ function ViewerContent() {
                                                                 children: skill.skill
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/viewer/page.tsx",
-                                                                lineNumber: 112,
+                                                                lineNumber: 113,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -888,13 +897,13 @@ function ViewerContent() {
                                                                 children: skill.relevantWeeks
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/viewer/page.tsx",
-                                                                lineNumber: 113,
+                                                                lineNumber: 114,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/viewer/page.tsx",
-                                                        lineNumber: 111,
+                                                        lineNumber: 112,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -902,24 +911,24 @@ function ViewerContent() {
                                                         children: skill.description
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/viewer/page.tsx",
-                                                        lineNumber: 115,
+                                                        lineNumber: 116,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, index, true, {
                                                 fileName: "[project]/app/viewer/page.tsx",
-                                                lineNumber: 110,
+                                                lineNumber: 111,
                                                 columnNumber: 17
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/app/viewer/page.tsx",
-                                        lineNumber: 108,
+                                        lineNumber: 109,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/viewer/page.tsx",
-                                lineNumber: 106,
+                                lineNumber: 107,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -933,7 +942,7 @@ function ViewerContent() {
                                                 children: "Profile"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/viewer/page.tsx",
-                                                lineNumber: 124,
+                                                lineNumber: 125,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -941,7 +950,7 @@ function ViewerContent() {
                                                 children: roadmap.profile.description
                                             }, void 0, false, {
                                                 fileName: "[project]/app/viewer/page.tsx",
-                                                lineNumber: 125,
+                                                lineNumber: 126,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -952,7 +961,7 @@ function ViewerContent() {
                                                         children: "Experience:"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/viewer/page.tsx",
-                                                        lineNumber: 127,
+                                                        lineNumber: 128,
                                                         columnNumber: 17
                                                     }, this),
                                                     " ",
@@ -960,13 +969,13 @@ function ViewerContent() {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/viewer/page.tsx",
-                                                lineNumber: 126,
+                                                lineNumber: 127,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/viewer/page.tsx",
-                                        lineNumber: 123,
+                                        lineNumber: 124,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -977,7 +986,7 @@ function ViewerContent() {
                                                 children: "Learning Style"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/viewer/page.tsx",
-                                                lineNumber: 132,
+                                                lineNumber: 133,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -985,19 +994,19 @@ function ViewerContent() {
                                                 children: roadmap.learningStyle
                                             }, void 0, false, {
                                                 fileName: "[project]/app/viewer/page.tsx",
-                                                lineNumber: 133,
+                                                lineNumber: 134,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/viewer/page.tsx",
-                                        lineNumber: 131,
+                                        lineNumber: 132,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/viewer/page.tsx",
-                                lineNumber: 122,
+                                lineNumber: 123,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1013,20 +1022,20 @@ function ViewerContent() {
                                                         className: "w-4 h-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/viewer/page.tsx",
-                                                        lineNumber: 141,
+                                                        lineNumber: 142,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         children: "Start Date"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/viewer/page.tsx",
-                                                        lineNumber: 142,
+                                                        lineNumber: 143,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/viewer/page.tsx",
-                                                lineNumber: 140,
+                                                lineNumber: 141,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1034,13 +1043,13 @@ function ViewerContent() {
                                                 children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$roadmap$2d$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatDate"])(roadmap.startDate)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/viewer/page.tsx",
-                                                lineNumber: 144,
+                                                lineNumber: 145,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/viewer/page.tsx",
-                                        lineNumber: 139,
+                                        lineNumber: 140,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1053,20 +1062,20 @@ function ViewerContent() {
                                                         className: "w-4 h-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/viewer/page.tsx",
-                                                        lineNumber: 149,
+                                                        lineNumber: 150,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         children: "Target End"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/viewer/page.tsx",
-                                                        lineNumber: 150,
+                                                        lineNumber: 151,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/viewer/page.tsx",
-                                                lineNumber: 148,
+                                                lineNumber: 149,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1074,37 +1083,37 @@ function ViewerContent() {
                                                 children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$roadmap$2d$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["formatDate"])(roadmap.targetEndDate)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/viewer/page.tsx",
-                                                lineNumber: 152,
+                                                lineNumber: 153,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/viewer/page.tsx",
-                                        lineNumber: 147,
+                                        lineNumber: 148,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/viewer/page.tsx",
-                                lineNumber: 138,
+                                lineNumber: 139,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/viewer/page.tsx",
-                        lineNumber: 104,
+                        lineNumber: 105,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/viewer/page.tsx",
-                lineNumber: 95,
+                lineNumber: 96,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/viewer/page.tsx",
-        lineNumber: 51,
+        lineNumber: 52,
         columnNumber: 5
     }, this);
 }
@@ -1139,7 +1148,7 @@ function ViewerPage() {
                                     fill: "none"
                                 }, void 0, false, {
                                     fileName: "[project]/app/viewer/page.tsx",
-                                    lineNumber: 168,
+                                    lineNumber: 169,
                                     columnNumber: 15
                                 }, void 0),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -1148,13 +1157,13 @@ function ViewerPage() {
                                     d: "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                                 }, void 0, false, {
                                     fileName: "[project]/app/viewer/page.tsx",
-                                    lineNumber: 169,
+                                    lineNumber: 170,
                                     columnNumber: 15
                                 }, void 0)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/viewer/page.tsx",
-                            lineNumber: 167,
+                            lineNumber: 168,
                             columnNumber: 13
                         }, void 0),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1162,33 +1171,33 @@ function ViewerPage() {
                             children: "Loading..."
                         }, void 0, false, {
                             fileName: "[project]/app/viewer/page.tsx",
-                            lineNumber: 171,
+                            lineNumber: 172,
                             columnNumber: 13
                         }, void 0)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/viewer/page.tsx",
-                    lineNumber: 166,
+                    lineNumber: 167,
                     columnNumber: 11
                 }, void 0)
             }, void 0, false, {
                 fileName: "[project]/app/viewer/page.tsx",
-                lineNumber: 165,
+                lineNumber: 166,
                 columnNumber: 9
             }, void 0)
         }, void 0, false, {
             fileName: "[project]/app/viewer/page.tsx",
-            lineNumber: 164,
+            lineNumber: 165,
             columnNumber: 7
         }, void 0),
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ViewerContent, {}, void 0, false, {
             fileName: "[project]/app/viewer/page.tsx",
-            lineNumber: 176,
+            lineNumber: 177,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/viewer/page.tsx",
-        lineNumber: 163,
+        lineNumber: 164,
         columnNumber: 5
     }, this);
 }

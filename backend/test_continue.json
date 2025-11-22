@@ -1,0 +1,12 @@
+{
+  "conversation_history": [
+    {
+      "role": "assistant",
+      "content": "Hello! What skill do you want to master?"
+    },
+    {
+      "role": "user",
+      "content": "I want to learn React"
+    }
+  ]
+}

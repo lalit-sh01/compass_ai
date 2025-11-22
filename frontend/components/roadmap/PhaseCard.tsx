@@ -12,8 +12,8 @@ export default function PhaseCard({ phase }: PhaseCardProps) {
   const progress = getPhaseProgress(phase);
 
   return (
-    <div className="bg-surface rounded-md shadow-sm border border-border overflow-hidden hover:shadow-md transition-shadow">
-      <div className="p-[var(--space-6)]">
+    <div className="h-full flex flex-col bg-surface rounded-md shadow-sm border border-border overflow-hidden hover:shadow-md transition-shadow">
+      <div className="flex-1 flex flex-col p-[var(--space-6)]">
         <div className="flex items-start justify-between mb-4">
           <div className="flex-1">
             <div className="flex items-center gap-2 mb-2">
@@ -25,12 +25,14 @@ export default function PhaseCard({ phase }: PhaseCardProps) {
                 {phase.weekRange}
               </span>
             </div>
-            <h3 className="text-xl font-bold text-text-primary mb-2">{phase.title}</h3>
-            <p className="text-sm text-text-secondary leading-relaxed">{phase.summary}</p>
+            <div className="min-h-[3.5rem]">
+              <h3 className="text-xl font-bold text-text-primary mb-2 line-clamp-2">{phase.title}</h3>
+            </div>
+            <p className="text-sm text-text-secondary leading-relaxed line-clamp-3">{phase.summary}</p>
           </div>
         </div>
 
-        <div className="mb-4">
+        <div className="mb-4 mt-auto">
           <ProgressBar completed={progress.completed} total={progress.total} percentage={progress.percentage} size="md" />
         </div>
 
