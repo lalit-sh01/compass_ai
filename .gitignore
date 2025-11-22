@@ -43,3 +43,10 @@ next-env.d.ts
 # Build artifacts
 frontend/node_modules/
 frontend/.next/
+
+# Python virtual environments
+backend/backend_venv/
+backend/venv/
+backend/.venv/
+venv/
+.venv/
